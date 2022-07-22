@@ -6,3 +6,4 @@ projects section.png
 tools.png
 workspace.code-workspace
 .DS_Store
+dir_to_ignore/MacPaint
