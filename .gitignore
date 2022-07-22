@@ -7,3 +7,4 @@ tools.png
 workspace.code-workspace
 .DS_Store
 MacPaint/
+.vscode/
