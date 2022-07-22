@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natia Lollie | Portfolio</title>
+    <link id="theme" class="theme-style" rel="stylesheet" href="css/default.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500&display=swap"
+        rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+</head>
+
+<body>
+
+
+    <!-- NavBar -->
+
+    <div class="navbar">
+
+        <div class="main-container flex">
+            <nav>
+                <ul>
+                    <li><a id="logo" class="nav-item" href="index.html">portfolio</a></li>
+                    <li><a class="nav-item" href="#about">About</a></li>
+                    <li><a class="nav-item" href="#skills">Skills</a></li>
+                    <li><a class="nav-item" href="#projects">Projects</a></li>
+                    <li><a class="nav-item" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- MENU MENU CLOCK -->
+
+            <div class="nav-end flex">
+
+                <div id="current-date">
+                    <span id="day"></span>
+                    <span id="month"></span>
+                    <span id="daynum"></span>
+                    <span id="year"></span>
+                </div>
+
+                <div id="current-time">
+                    <span id="hours"></span>
+                    <span id="minutes" style="margin-left: -3px;"></span>
+                    <span id="seconds" style="margin-left: -3px;"></span>
+                    <span id="period"></span>
+                </div>
+
+                <!-- WEBSITE THEME  -->
+
+                <div id="theme-icon" class="flex">
+                    <img id="icon" src="_imgs/icons/light_mode.svg" alt="">
+                </div>
+
+                <!-- WEBSITE SETTINGS  -->
+                <div id="settings-icon" class="flex">
+                    <img id="settings" src="_imgs/icons/settings.svg" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Main -->
+
+    <section id="greeting">
+        <div class="main-container">
+            <div class="greeting-wrapper">
+
+                <!-- TOOL BOX -->
+                <div class="greeting-toolbox">
+                    <div id="tools-wrapper" class="active-tool">
+                        <!--header-->
+                        <div class="greeting-toolbox-wrap"></div>
+                        <div class="greeting-toolbox-wrap"></div>
+                        <!--row 1-->
+                        <div><img class="tool" src="_imgs/tools/unselected/lasso.png" alt="lasso tool">
+                        </div>
+                        <div><img class="tool" src="_imgs/tools/unselected/selection.png" alt="selection tool"></div>
+                        <!--row 2-->
+                        <div><img class="tool" src="_imgs/tools/unselected/scroll.png" alt="scroll tool"></div>
+                        <div><img class="tool" src="_imgs/tools/unselected/text.png" alt="text tool"></div>
+                        <!--row 3-->
+                        <div><img class="tool" src="_imgs/tools/unselected/area-fill.png" alt="area fill tool"></div>
+                        <div><img class="tool" src="_imgs/tools/unselected/spray-paint.png" alt="spray paint tool">
+                        </div>
+                        <!--row 4-->
+                        <div><img class="tool" src="_imgs/tools/unselected/brush.png" alt="brush tool"></div>
+                        <div><img class="tool" src="_imgs/tools/unselected/pencil.png" alt="pencil tool"></div>
+                        <!--row 5-->
+                        <div><img class="tool" src="_imgs/tools/unselected/lines.png" alt="lines tool"></div>
+                        <div><img class="tool" src="_imgs/tools/unselected/eraser.png" alt="eraser tool"></div>
+                        <!--row 6-->
+                        <div><img class="tool" src="_imgs/tools/unselected/shapes/hollowed/square.png"
+                                alt="hollowed square tool"></div>
+                        <div><img class="tool" src="_imgs/tools/unselected/shapes/filled/square.png"
+                                alt="filled square tool"></div>
+                        <!--row 7-->
+                        <div><img class="tool" src="_imgs/tools/unselected/shapes/hollowed/squircle.png"
+                                alt="hollowed squircle tool"></div>
+                        <div><img class="tool" src="_imgs/tools/unselected/shapes/filled/squircle.png"
+                                alt="filled squircle tool"></div>
+                        <!--row 8-->
+                        <div><img class="tool" src="_imgs/tools/unselected/shapes/hollowed/oval.png"
+                                alt="hollowed oval tool"></div>
+                        <div><img class="tool" src="_imgs/tools/unselected/shapes/filled/oval.png"
+                                alt="filled oval tool"></div>
+                        <!--row 9-->
+                        <div><img class="tool" src="_imgs/tools/unselected/shapes/hollowed/freeform.png"
+                                alt="hollowed freeform tool"></div>
+                        <div><img class="tool" src="_imgs/tools/unselected/shapes/filled/freeform.png"
+                                alt="filled freeform tool"></div>
+                        <!--row 10-->
+                        <div><img class="tool" src="_imgs/tools/unselected/shapes/hollowed/polygon.png"
+                                alt="hollowed polygon tool"></div>
+                        <div><img class="tool" src="_imgs/tools/unselected/shapes/filled/polygon.png"
+                                alt="filled polygon tool"></div>
+                        <!--footer-->
+                        <div class="greeting-toolbox-wrap"></div>
+                        <div class="greeting-toolbox-wrap"></div>
+                    </div>
+                    <div id="tool-guide">
+                        <p><b>Current Tool:</b></p>
+                        <p id="selected-tool">*make Selection*</p>
+                    </div>
+                </div>
+
+                <!-- GREETING BOX -->
+                <div class="greeting-box">
+                    <div id="greeting-popup">
+                        <div id="greeting-elements">
+                            <div>
+                                <img class="exit" src="_imgs/icons/exit.svg" alt="exit popup">
+                            </div>
+                            <p>Helllo, My Name is Natia I am a Web Developer!</p>
+                            <p>6.01.125</p>
+                            <p>excepteur sint occaecat</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about">
+        <div class="main-container">
+            <h1>About Me</h1>
+            <div class="about-wrapper">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dicta tenetur vitae quo ad enim
+                    repudiandae voluptatum exercitationem molestiae delectus dolorum et consequatur incidunt magnam
+                    deleniti, non, pariatur, ipsum nemo? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Accusamus dicta tenetur vitae quo ad enim repudiandae
+                    voluptatum exercitationem molestiae delectus dolorum et consequatur incidunt magnam deleniti, non,
+                    pariatur, ipsum nemo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dicta
+                    tenetur vitae quo ad enim repudiandae voluptatum exercitationem molestiae delectus dolorum et
+                    consequatur incidunt magnam deleniti, non,
+                    pariatur, ipsum nemo?
+                    <br>
+                    <br>
+                    Accusamus dicta
+                    tenetur vitae quo ad enim repudiandae voluptatum exercitationem molestiae delectus dolorum et
+                    consequatur incidunt
+                    magnam deleniti, non,
+                    pariatur, ipsum nemo?
+                </p>
+            </div>
+            <h4><em>About This Portfolio</em></h4>
+            <div class="about-wrapper">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dicta tenetur vitae quo ad enim
+                    repudiandae voluptatum exercitationem molestiae delectus dolorum et consequatur incidunt magnam
+                    deleniti, non, pariatur, ipsum nemo? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Accusamus dicta tenetur vitae quo ad enim repudiandae
+                    voluptatum exercitationem molestiae delectus dolorum et consequatur incidunt magnam deleniti, non,
+                    pariatur, ipsum nemo?
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="skills">
+        <div class="main-container">
+            <h1>Skills</h1>
+
+            <div class="skills-wrapper">
+
+                <div class="pseudo-title-bar">
+                    <span class="browser-dot-title-bar-placeholder"></span>
+                    <div>old gcc drive</div>
+                </div>
+
+                <div class="pseudo-sub-title-bar">
+                    <div>10 Items</div>
+                    <div>395 MB in disk</div>
+                    <div>22.2 MB available</div>
+                </div>
+
+                <hr>
+
+                <div id="file-window">
+                    <div><img src="_imgs/icons/folder.svg" alt="Angular" class="skills-folder">
+                        <p>Angular</p>
+                    </div>
+                    <div><img src="_imgs/icons/folder.svg" alt="Javascript" class="skills-folder">
+                        <p>Javascript</p>
+                    </div>
+                    <div><img src="_imgs/icons/folder.svg" alt="Typescript" class="skills-folder">
+                        <p>Typescript</p>
+                    </div>
+                    <div><img src="_imgs/icons/folder.svg" alt="MySQL" class="skills-folder">
+                        <p>MySQL</p>
+                    </div>
+                    <div><img src="_imgs/icons/folder.svg" alt="PHP" class="skills-folder">
+                        <p>PHP</p>
+                    </div>
+                    <div><img src="_imgs/icons/folder.svg" alt="HTML/CSS" class="skills-folder">
+                        <p>HTML/CSS</p>
+                    </div>
+                    <div><img src="_imgs/icons/folder.svg" alt="Bootstrap" class="skills-folder">
+                        <p>Bootstrap</p>
+                    </div>
+                    <div><img src="_imgs/icons/folder.svg" alt="Git" class="skills-folder">
+                        <p>Git</p>
+                    </div>
+                    <div><img src="_imgs/icons/folder.svg" alt="Cascade CMS" class="skills-folder">
+                        <p>Cascade CMS</p>
+                    </div>
+                    <div></div>
+                    <div><img src="_imgs/icons/folder.svg" alt="Wordpress" class="skills-folder">
+                        <p>Wordpress</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="projects">
+        <div class="main-container">
+            <h1>Projects</h1>
+
+            <div class="projects-wrapper">
+
+                <div class="pseudo-title-bar">
+                    <div></div>
+                    <div>projects homepage</div>
+                </div>
+
+                <div class="pseudo-browser-toolbar">
+                    <div class="pseudo-browser-toolbar-icons">
+                        <span class="browser-dot-title-bar-placeholder projects"></span>
+                        <div><img src="_imgs/icons/undo.svg" alt="Go Back"></div>
+                        <div><img src="_imgs/icons/undo.svg" alt="Go Back"></div>
+                        <div><img src="_imgs/icons/undo.svg" alt="Go Back"></div>
+                        <div><img src="_imgs/icons/undo.svg" alt="Go Back"></div>
+                        <div><img src="_imgs/icons/undo.svg" alt="Go Back"></div>
+                        <div></div>
+                    </div>
+
+                    <!-- dropdown menu -->
+                    <div class="pseudo-dropdown">
+                        <select id="project-dropdown" onchange="filterByDropDown()"> <!--onchange="filterProjects()"-->
+                            <option selected value="all">All</option>
+                            <option value="fun">Fun Projects</option>
+                            <option value="work">Work</option>
+                            <option value="legacy">Legacy Projects</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <div class="pseudo-sub-browser-toolbar">
+                    <p>URL:</p>
+                    <p style="margin-left: 6px;text-transform: lowercase;">
+                        http://natialollie.projects.com
+                    </p>
+                </div>
+
+                <hr>
+
+                <div class="pseudo-sub-browser-toolbar">
+                    <p id="full-url" style="text-transform: lowercase;">http://natialollie.projects.com/<span
+                            id="url">legacy-projects</span></p>
+                </div>
+
+                <hr>
+
+                <!-- tab menu -->
+                <div id="project-filter">
+                    <ul>
+                        <li id="all" class="active">All</li>
+                        <li id="fun">Fun-Projects</li>
+                        <li id="work">Work</li>
+                        <li id="legacy">Legacy</li>
+                    </ul>
+                </div>
+
+                <!-- hashtag menu -->
+                <div id="project-filter-skillset">
+                    <ul>
+                        <li id="angular">#angular</li>
+                        <li id="javascript">#javascript</li>
+                        <li id="typescript">#typescript</li>
+                        <li id="mysql">#mysql</li>
+                        <li id="php">#php</li>
+                        <li id="html/css">#html/css</li>
+                        <li id="bootstrap">#bootstrap</li>
+                        <li id="git">#git</li>
+                        <li id="cascade-cms">#cascade-cms</li>
+                        <li id="wordpress">#wordpress</li>
+                        <li id="microsoft-flow">#microsoft-flow</li>
+                    </ul>
+                </div>
+
+                <!-- project cards -->
+                <div class="project-card">
+                    <!-- project -->
+                    <div data-filter="work" tag-filter="#html/css #javascript">
+                        <img src="_imgs/thumbnails/sample2.png" alt="source-way ecommerce">
+                        <div class="project-card-about">
+                            <ul class="tags" >
+                                <li>#html #css</li>
+                                <li>#javascript</li>
+                            </ul>
+                            <h3>SourceWay E-commerce</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="learn"><a href="#">learn more &#8594;</a></p>
+                        </div>
+                    </div>
+                    <!-- project -->
+                    <div data-filter="work" tag-filter="#wordpress #html/css #javascript">
+                        <img src="_imgs/thumbnails/sample2.png" alt="tlc church">
+                        <div class="project-card-about">
+                            <ul class="tags">
+                                <li>#wordpress</li>
+                                <li>#html #css</li>
+                                <li>#javascript</li>
+                            </ul>
+                            <h3>TLC Church</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="learn"><a href="#">learn more &#8594;</a></p>
+                        </div>
+                    </div>
+                    <!-- project -->
+                    <div data-filter="work" tag-filter="#wordpress #javascript #php #bootstrap #cascade-cms #html/css #microsoft-flow">
+                        <img src="_imgs/thumbnails/sample2.png" alt="university of houston">
+                        <div class="project-card-about">
+                            <ul class="tags">
+                                <li><em>#wordpress</em> </li>
+                                <li><em>#javascript</em> </li>
+                                <li><em>#php</em> </li>
+                                <li class="see-all"> | see-all</li>
+                                <ul class="tags-hidden">
+                                    <li>#bootstrap</li>
+                                    <li>#cascade-cms</li>
+                                    <li>#html #css</li>
+                                    <li>#microsoft-flow</li>
+                                </ul>
+                            </ul>
+                            <h3>University of Houston</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="learn"><a href="#">learn more &#8594;</a></p>
+                        </div>
+                    </div>
+                    <!-- project -->
+                    <div data-filter="work" tag-filter="#html/css #javascript">
+                        <img src="_imgs/thumbnails/sample2.png" alt="page forms">
+                        <div class="project-card-about">
+                            <ul class="tags">
+                                <li>#html #css</li>
+                                <li>#javascript</li>
+                            </ul>
+                            <h3>Page Forms</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="learn"><a href="#">learn more &#8594;</a></p>
+                        </div>
+                    </div>
+                    <!-- project -->
+                    <div data-filter="fun" tag-filter="#html/css #javascript">
+                        <img src="_imgs/thumbnails/sample2.png" alt="exam page">
+                        <div class="project-card-about">
+                            <ul class="tags">
+                                <li>#html #css</li>
+                                <li>#javascript</li>
+                            </ul>
+                            <h3>Exam Page</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="learn"><a href="#">learn more &#8594;</a></p>
+                        </div>
+                    </div>
+                    <!-- project -->
+                    <div data-filter="fun" tag-filter="#html/css #javascript">
+                        <img src="_imgs/thumbnails/sample2.png" alt="card game">
+                        <div class="project-card-about">
+                            <ul class="tags">
+                                <li>#html #css</li>
+                                <li>#javascript</li>
+                            </ul>
+                            <h3>Card Game</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="learn"><a href="#">learn more &#8594;</a></p>
+                        </div>
+                    </div>
+                    <!-- project -->
+                    <div data-filter="fun" tag-filter="#angular #typescript #bootstrap #html/css #javascript">
+                        <img src="_imgs/thumbnails/sample2.png" alt="angular grades app">
+                        <div class="project-card-about">
+                            <ul class="tags">
+                                <li>#angular</li>
+                                <li>#typescript</li>
+                                <li>#bootstrap</li>
+                                <li class="see-all"> | see-all</li>
+                                <ul class="tags-hidden">
+                                    <li>#html #css</li>
+                                    <li>#javascript</li>
+                                </ul>
+                            </ul>
+                            <h3>Grading App</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="learn"><a href="#">learn more &#8594;</a></p>
+                        </div>
+                    </div>
+                    <!-- project -->
+                    <div data-filter="legacy" tag-filter="#angular #typescript #php #javascript #html/css #mysql #git">
+                        <img src="_imgs/thumbnails/sample2.png" alt="angular shopping app">
+                        <div class="project-card-about">
+                            <ul class="tags">
+                                <li>#angular</li>
+                                <li>#typescript</li>
+                                <li>#php</li>
+                                <li class="see-all"> | see-all</li>
+                                <ul class="tags-hidden">
+                                    <li>#javascript</li>
+                                    <li>#html #css</li>
+                                    <li>#mysql</li>
+                                    <li>#git</li>
+                                </ul>
+                            </ul>
+                            <h3>Shopping App</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="learn"><a href="#">learn more &#8594;</a></p>
+                        </div>
+                    </div>
+                    <!-- project -->
+                    <div data-filter="legacy" tag-filter="#angular #typescript #php #html/css #javascript #mysql #git">
+                        <img src="_imgs/thumbnails/sample2.png" alt="prl properties">
+                        <div class="project-card-about">
+                            <ul class="tags">
+                                <li>#angular</li>
+                                <li>#typescript</li>
+                                <li>#php</li>
+                                <li class="see-all"> | see-all</li>
+                                <ul class="tags-hidden">
+                                    <li>#html #css</li>
+                                    <li>#javascript</li>
+                                    <li>#mysql</li>
+                                    <li>#git</li>
+                                </ul>
+                            </ul>
+                            <h3>PRL Properties</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="learn"><a href="#">learn more &#8594;</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact">
+        <div class="main-container">
+
+            <h1>Contact Me</h1>
+
+
+            <div class="contact-container">
+
+                <div class="pseudo-title-bar">
+                    <span class="browser-dot-title-bar-placeholder"></span>
+                    <div>get in touch</div>
+                </div>
+
+                <div class="pseudo-sub-title-bar current-status">
+                    <span>I am currently available for remote work</span>
+                </div>
+
+                <hr>
+
+                <form method="POST" id="contact-form" class="contact-wrapper">
+
+                    <label>Name:</label>
+                    <input class="input-field" type="text" name="name" required>
+
+                    <label>Subject:</label>
+                    <input class="input-field" type="text" name="subject">
+
+                    <label>Email:</label>
+                    <input class="input-field" type="text" name="email" required>
+
+                    <label>Message:</label>
+                    <textarea class="input-field" rows="10" type="text" name="message" required></textarea>
+
+                    <div class="submit-btn-wrapper">
+                        <input id="submit-btn" type="submit" value="send">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Script -->
+
+    <script src="js/main.js"> </script>
+    <script src="js/update-filter.js"> </script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script> -->
+    <!-- <script src="js/filter.js"></script> -->
+
+</body>
+
+</html>
