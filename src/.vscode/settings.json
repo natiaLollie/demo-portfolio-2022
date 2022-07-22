@@ -1,6 +1,0 @@
-{
-    "files.exclude": {
-        "**/._*": true,
-        "node_modules/": true
-    }
-}
