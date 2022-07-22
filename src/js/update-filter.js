@@ -26,22 +26,24 @@ function filterByDropDown() {
 
     chooseTabMenuItem(dropSelected);
 
-    /* then select match on tab menu */
-    function chooseTabMenuItem(dropSelected) {
+    updateUrl(dropSelected);
 
-        resetTabMenu();
+}
 
-        // console.log(dropSelected);
+/* then select match on tab menu */
+function chooseTabMenuItem(dropSelected) {
 
-        document.getElementById(dropSelected)
-            .classList
-            .add('active');
+    resetTabMenu();
 
-        // console.log(dropSelected);
+    // console.log(dropSelected);
 
-        filterByTab(dropSelected); //fun
+    document.getElementById(dropSelected)
+        .classList
+        .add('active');
 
-    }
+    // console.log(dropSelected);
+
+    filterByTab(dropSelected); //fun
 
 }
 
@@ -77,11 +79,15 @@ function filterByTab(dropSelected) {
         dropMenuList.selectedIndex = setDropDown;
     }
 
+    updateUrl(dropSelected);
+
 }
 
 function filterBySkillFolder() {
 
 }
+
+
 
 
 /** ---------------------------- */
@@ -101,18 +107,16 @@ function clearTabDropMenus(){
 
 /** ---------------------------- */
 
-function updateUrl() {
-    
+function updateUrl(dropSelected) {
+
+    // console.log(dropSelected);
+
+    dropSelected += '-projects';   
+
+    /* add selected project category to subdirectory url */
+    document.getElementById('subdirectory-url').innerHTML = dropSelected;
+
 }
-
-
-
-
-
-
-
-
-
 
 
 
