@@ -26,6 +26,8 @@ function filterByDropDown() {
 
     // console.log(dropSelected);
 
+    resetHashtagMenu();
+
     chooseTabMenuItem(dropSelected);
 
     updateUrl(dropSelected);
@@ -55,7 +57,7 @@ tabMenuList.forEach(li => {
             li.className = '';
         })
         li.className = 'active';
-        var tabSelected = li.id;
+        let tabSelected = li.id;
         filterByTab(tabSelected);
     }
 })
@@ -64,7 +66,9 @@ function filterByTab(dropSelected) {
 
     // console.log(dropSelected);
 
-    // FILTER PROJECTS
+    resetHashtagMenu();
+
+    //* FILTER PROJECTS */
     projectCard.forEach(div => {
         div.style.display = 'none';
         // console.log(div.getAttribute('data-filter'));
@@ -92,6 +96,7 @@ hashtagMenuItem.forEach(li => {
             li.className = "";
         })
         li.className = "hashtag-active";
+        resetTabMenu();
     }
 })
 
@@ -107,11 +112,21 @@ function filterByHashtagMenu() {
 
 }
 
-//RESET TAB MENU
+// RESET TAB MENU
 function resetTabMenu() {
     // remove active class 
     tabMenuList.forEach(li => {
         tabMenuList.forEach(li => {
+            li.className = "";
+        })
+    })
+}
+
+// RESET HASHTAG MENU 
+function resetHashtagMenu() {
+    // remove active class 
+    hashtagMenuItem.forEach(li => {
+        hashtagMenuItem.forEach(li => {
             li.className = "";
         })
     })
@@ -122,7 +137,7 @@ function updateUrl(dropSelected) {
 
     // console.log(dropSelected);
 
-    dropSelected += '-projects';   
+    dropSelected += '-projects';
 
     /* ADD SELECTED PROJECT CATEGORY TO SUBDIRECTORY URL */
     document.getElementById('subdirectory-url').innerHTML = dropSelected;
