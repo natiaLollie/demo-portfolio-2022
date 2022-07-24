@@ -12,7 +12,8 @@
 var dropMenuList = document.getElementById('project-dropdown');
 var projectCard = document.querySelectorAll('.project-card > div');
 var tabMenuList = document.querySelectorAll('#project-filter ul li');
-let tabMenuListArr = ['all', 'fun', 'work', 'legacy']
+let tabMenuListArr = ['all', 'fun', 'work', 'legacy'];
+let defaultSubDirectory = document.getElementById('subdirectory-url').innerHTML;
 let hashtagMenuItem = document.querySelectorAll("#project-filter-skillset ul li");
 
 // FILTER BY DROPDOWN MENU
@@ -68,7 +69,7 @@ function filterByTab(dropSelected) {
 
     resetHashtagMenu();
 
-    //* FILTER PROJECTS */
+    // FILTER PROJECTS
     projectCard.forEach(div => {
         div.style.display = 'none';
         // console.log(div.getAttribute('data-filter'));
@@ -108,23 +109,24 @@ function filterByHashtagMenu() {
     resetTabMenu();
 
     // set subdirectory url to default 
-
-
 }
 
 // RESET TAB MENU
 function resetTabMenu() {
-    // remove active class 
     tabMenuList.forEach(li => {
         tabMenuList.forEach(li => {
             li.className = "";
         })
+        // set subdirectory url back to default
+        document.getElementById('subdirectory-url').innerHTML = defaultSubDirectory;
+        // set dropdown menu back to default
+        dropMenuList.selectedIndex = 0;
+
     })
 }
 
 // RESET HASHTAG MENU 
 function resetHashtagMenu() {
-    // remove active class 
     hashtagMenuItem.forEach(li => {
         hashtagMenuItem.forEach(li => {
             li.className = "";
