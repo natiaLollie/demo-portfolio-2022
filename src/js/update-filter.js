@@ -2,7 +2,8 @@
  * 
  * Script: Filter Projects 
  * 
- * 1. by dropdown
+ * resets first 
+ * 1. by dropdown (tab menu first)
  * 2. by tabs
  * 3. by skill folder
  * 4. by hashtag menu
@@ -97,18 +98,34 @@ hashtagMenuItem.forEach(li => {
             li.className = "";
         })
         li.className = "hashtag-active";
+        let hashtagValue = li.textContent;
         resetTabMenu();
+        filterByHashtagMenu(hashtagValue);
     }
 })
 
-function filterByHashtagMenu() {
+function filterByHashtagMenu(hashtagValue) {
 
-    alert('hashtag menu activated');
-
-    // clear active, tab and dropdown menus
     resetTabMenu();
 
-    // set subdirectory url to default 
+    // FILTER PROJECTS
+    projectCard.forEach(div => {
+        div.style.display = 'none';
+
+        // console.log(`hashtag menu item ${hashtagValue} was selected`);
+
+        let hashtagAtt = div.getAttribute('tag-filter');
+
+        // console.log(`tag attributes: ${hashtagAtt}`);
+
+        let hashtagAttArray = new Array(hashtagAtt)
+            .toString()
+            .split(" ");
+
+        if (hashtagAttArray.includes(hashtagValue)) {
+            div.style.display = "block";
+        }
+    })
 }
 
 // RESET TAB MENU
@@ -117,9 +134,11 @@ function resetTabMenu() {
         tabMenuList.forEach(li => {
             li.className = "";
         })
-        // set subdirectory url back to default
+
+        /* SET SUBDIRECTORY URL TO DEFAULT */
         document.getElementById('subdirectory-url').innerHTML = defaultSubDirectory;
-        // set dropdown menu back to default
+
+        /* SET DROPDOWN MENU URL TO DEFAULT */
         dropMenuList.selectedIndex = 0;
 
     })
