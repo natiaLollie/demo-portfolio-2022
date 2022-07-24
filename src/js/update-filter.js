@@ -5,8 +5,8 @@
  * resets first 
  * 1. by dropdown (tab menu first)
  * 2. by tabs
- * 3. by skill folder
- * 4. by hashtag menu
+ * 3. by hashtag menu
+ * 4. by skill folder
  * 
  */
 
@@ -16,6 +16,7 @@ var tabMenuList = document.querySelectorAll('#project-filter ul li');
 let tabMenuListArr = ['all', 'fun', 'work', 'legacy'];
 let defaultSubDirectory = document.getElementById('subdirectory-url').innerHTML;
 let hashtagMenuItem = document.querySelectorAll("#project-filter-skillset ul li");
+let selectedSkillFolder = 
 
 // FILTER BY DROPDOWN MENU
 function filterByDropDown() {
@@ -108,11 +109,11 @@ function filterByHashtagMenu(hashtagValue) {
 
     resetTabMenu();
 
+    // console.log(`hashtag menu item ${hashtagValue} was selected`);
+
     // FILTER PROJECTS
     projectCard.forEach(div => {
         div.style.display = 'none';
-
-        // console.log(`hashtag menu item ${hashtagValue} was selected`);
 
         let hashtagAtt = div.getAttribute('tag-filter');
 
@@ -126,6 +127,10 @@ function filterByHashtagMenu(hashtagValue) {
             div.style.display = "block";
         }
     })
+}
+
+function filterBySkillsFolder() {
+
 }
 
 // RESET TAB MENU
