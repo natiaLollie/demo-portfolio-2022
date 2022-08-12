@@ -16,7 +16,6 @@ var tabMenuList = document.querySelectorAll('#project-filter ul li');
 let tabMenuListArr = ['all', 'fun', 'work', 'legacy'];
 let defaultSubDirectory = document.getElementById('subdirectory-url').innerHTML;
 let hashtagMenuItem = document.querySelectorAll("#project-filter-skillset ul li");
-let selectedSkillFolder = 
 
 // FILTER BY DROPDOWN MENU
 function filterByDropDown() {
@@ -129,7 +128,12 @@ function filterByHashtagMenu(hashtagValue) {
     })
 }
 
+// FILTER BY SKILL FOLDERS
 function filterBySkillsFolder() {
+
+    // scroll to section
+    // select item in hashtag menu
+    // filter projects by tag filter 
 
 }
 
