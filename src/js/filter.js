@@ -1,123 +1,231 @@
 /**
  * 
- * Script Purpose:
+ * Script: Filter Projects 
  * 
- * This script provides three ways for users to filter portfolio projects.
+ * resets first 
+ * 1. by dropdown (tab menu first)
+ * 2. by tabs
+ * 3. by hashtag menu
+ * 4. by skill folder
  * 
- * 1. filter by tabs within the project section
- * 2. filter by skillset folders within the skills section
- * 3. filter by dropdown menu within the project section
- *
- **/
+ */
 
+var dropMenuList = document.getElementById('project-dropdown');
+var projectCard = document.querySelectorAll('.project-card > div');
+var tabMenuList = document.querySelectorAll('#project-filter ul li');
+let tabMenuListArr = ['all', 'fun', 'work', 'legacy'];
+let defaultSubDirectory = document.getElementById('subdirectory-url').innerHTML;
+let hashtagMenuItem = document.querySelectorAll("#project-filter-skillset ul li");
 
-// Script: Filter by Main Tabs within Project Section 
+// FILTER BY DROPDOWN MENU
+function filterByDropDown() {
 
-let menuItem = document.querySelectorAll("#project-filter ul li");
-let projectItem = document.querySelectorAll(".project-card > div");
+    let dropSelected = dropMenuList.options[dropMenuList.selectedIndex]
+        .text
+        .replace('Projects', '')
+        .replace(' ', '')
+        .toLowerCase();
 
-menuItem.forEach(li => {
-    li.onclick = function () {
+    // console.log(dropSelected);
 
-        // active selected menu item
-        menuItem.forEach(li => {
-            li.className = "";
-        })
-        li.className = "active";
+    resetHashtagMenu();
 
-        /*
-        const activeMainMenu = document.querySelector(".active").id.toString(); 
-            console.log(activeMainMenu);
+    chooseTabMenuItem(dropSelected);
 
-            */
+    updateUrl(dropSelected);
 
-        // filter the projects
-        let value = li.textContent;
-        projectItem.forEach(div => {
-            div.style.display = 'none';
-            console.log(div.getAttribute('data-filter'));
-            if (div.getAttribute('data-filter') == value.toLowerCase() || value == "All") {
-                div.style.display = "block";
-            }
-        })
+    /* THEN MATCH TAB MENU W/ DROPDOWN MENU */
+    function chooseTabMenuItem(dropSelected) {
 
-        // reset url to default
-        fullUrl.innerHTML = originalUrl;
-        // update url 
-        document.getElementById('url').innerHTML = projectType;
+        resetTabMenu();
 
-        
+        // console.log(dropSelected);
 
-    }
-})
+        document.getElementById(dropSelected)
+            .classList
+            .add('active');
 
-// Script: Filter by Skillset Folders within the Skills Section
+        // console.log(dropSelected);
 
-function filterProjects(selectedFolder) {
+        filterByTab(dropSelected); //fun
 
-    let projectType = project.options[project.selectedIndex].text.replace('Projects', '').replace(' ', '').concat('-projects');
-    let fullUrl = document.getElementById('full-url');
-
-    if (selectedFolder) {
-        // reset url to default 
-        fullUrl.innerHTML = originalUrl;
-        // add 'all-projects' to url
-        document.getElementById('url').innerHTML = projectType;
-        // add the selected skills-folder value to end of url 
-        fullUrl.innerHTML = fullUrl.innerHTML.concat(`/${selectedFolder}`);
-        // psuedo-click selected hashtag skill inside project folder
-        document.getElementById(selectedFolder.toLowerCase()).click();
-    }
-
-// Script: Filter by Dropdown Menu within Project Section
-
-     else {
-        // reset url to default
-        fullUrl.innerHTML = originalUrl;
-        // set the url to the selected project type 
-        document.getElementById('url').innerHTML = projectType;
-        // pseudo-click selected project type on main menu
-        let rawProjectType = projectType.toLowerCase().replace('-projects', '');
-        // console.log(rawProjectType);
-        document.getElementById(rawProjectType).click();
     }
 }
 
-// Script: Filter by hashtags within the projects section 
+// FILTER BY TAB MENU
+tabMenuList.forEach(li => {
+    li.onclick = function () {
+        tabMenuList.forEach(li => {
+            li.className = '';
+        })
+        li.className = 'active';
+        let tabSelected = li.id;
+        filterByTab(tabSelected);
+    }
+})
 
-let hashtagMenuItem = document.querySelectorAll("#project-filter-skillset ul li");
+function filterByTab(dropSelected) {
 
+    // console.log(dropSelected);
+
+    resetHashtagMenu();
+
+    // FILTER PROJECTS
+    projectCard.forEach(div => {
+        div.style.display = 'none';
+        // console.log(div.getAttribute('data-filter'));
+        if (div.getAttribute('data-filter') == dropSelected.toLowerCase() || dropSelected == "all") {
+            div.style.display = "block";
+        }
+    })
+
+    /* THEN MATCH DROPDOWN MENU W/ TAB MENU */
+    if (dropSelected) {
+
+        let setDropDown = tabMenuListArr.indexOf(dropSelected); // return a number value 
+        // console.log(setDropDown);
+        dropMenuList.selectedIndex = setDropDown;
+    }
+
+    updateUrl(dropSelected);
+
+}
+
+// FILTER BY SKILL FOLDERS
+document.querySelectorAll('.skills-folder').forEach(item => {
+    item.addEventListener('click', events => {
+        let selectedFolder = item.alt
+        // console.log(selectedFolder);
+        filterBySkillsFolder(selectedFolder);
+    })
+})
+
+function filterBySkillsFolder(selectedFolder) {
+
+    document.getElementById('projects').scrollIntoView();
+
+    selectedFolder = selectedFolder.toString().toLowerCase();
+
+    console.log(`selected skills folder: ${selectedFolder}`);
+
+    document.getElementById(selectedFolder).click();
+
+}
+
+
+// FILTER BY HASHTAG MENU
 hashtagMenuItem.forEach(li => {
     li.onclick = function () {
-        console.log('function entered');
-
-        // active selected menu item
         hashtagMenuItem.forEach(li => {
             li.className = "";
         })
         li.className = "hashtag-active";
-
-        // filter the projects by hashtag
-        projectItem.forEach(div => {
-            div.style.display = 'none';
-
-            let hashtagValue = li.textContent
-                .toLowerCase();
-
-            console.log(`hashtag ${hashtagValue} was selected`);
-
-            let hashtagAtt = div.getAttribute('tag-filter');
-
-            console.log(`tag attributes: ${hashtagAtt}`);
-
-            let hashtagAttArray = new Array(hashtagAtt)
-                .toString()
-                .split(" ");
-
-            if (hashtagAttArray.includes(hashtagValue)) {
-                div.style.display = "block";
-            }
-        })
+        let hashtagValue = li.textContent;
+        resetTabMenu();
+        filterByHashtagMenu(hashtagValue);
     }
-
 })
+
+function filterByHashtagMenu(hashtagValue) {
+
+    resetTabMenu();
+
+    console.log(`hashtag menu item ${hashtagValue} was selected`);
+
+    // FILTER PROJECTS
+    projectCard.forEach(div => {
+        div.style.display = 'none';
+
+        let hashtagAtt = div.getAttribute('tag-filter');
+
+        // console.log(`tag attributes: ${hashtagAtt}`);
+
+        let hashtagAttArray = new Array(hashtagAtt)
+            .toString()
+            .split(" ");
+
+        if (hashtagAttArray.includes(hashtagValue)) {
+            div.style.display = "block";
+        }
+    })
+}
+
+// RESET TAB MENU
+function resetTabMenu() {
+    tabMenuList.forEach(li => {
+        tabMenuList.forEach(li => {
+            li.className = "";
+        })
+
+        /* SET SUBDIRECTORY URL TO DEFAULT */
+        document.getElementById('subdirectory-url').innerHTML = defaultSubDirectory;
+
+        /* SET DROPDOWN MENU URL TO DEFAULT */
+        dropMenuList.selectedIndex = 0;
+
+    })
+}
+
+// RESET HASHTAG MENU 
+function resetHashtagMenu() {
+    hashtagMenuItem.forEach(li => {
+        hashtagMenuItem.forEach(li => {
+            li.className = "";
+        })
+    })
+}
+
+// UPDATE SUBDIRECTORY URL
+function updateUrl(dropSelected) {
+
+    // console.log(dropSelected);
+
+    dropSelected += '-projects';
+
+    /* ADD SELECTED PROJECT CATEGORY TO SUBDIRECTORY URL */
+    document.getElementById('subdirectory-url').innerHTML = dropSelected;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
