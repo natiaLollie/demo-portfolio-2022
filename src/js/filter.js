@@ -1,14 +1,16 @@
 /**
  * 
- * Script: Filter Projects 
+ * Script Purpose: 
  * 
- * resets first 
- * 1. by dropdown (tab menu first)
- * 2. by tabs
- * 3. by hashtag menu
- * 4. by skill folder
+ * This script provides four ways for users to filter portfolio projects.
  * 
- */
+ * 1. filter by dropdown menu
+ * 2. filter by main tab menu
+ * 3. filter by sub menu (hashtag menu)
+ * 4. filter by skillset folders 
+ *
+ * 
+ **/
 
 var dropMenuList = document.getElementById('project-dropdown');
 var projectCard = document.querySelectorAll('.project-card > div');
@@ -17,7 +19,7 @@ let tabMenuListArr = ['all', 'fun', 'work', 'legacy'];
 let defaultSubDirectory = document.getElementById('subdirectory-url').innerHTML;
 let hashtagMenuItem = document.querySelectorAll("#project-filter-skillset ul li");
 
-// FILTER BY DROPDOWN MENU
+
 function filterByDropDown() {
 
     let dropSelected = dropMenuList.options[dropMenuList.selectedIndex]
