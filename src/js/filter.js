@@ -7,7 +7,7 @@
  * 1. filter by dropdown menu
  * 2. filter by main tab menu
  * 3. filter by sub menu (hashtag menu)
- * 4. filter by skillset folders 
+ * 4. filter by skillset folders
  *
  * 
  **/
@@ -187,8 +187,17 @@ function updateUrl(dropSelected) {
     /* ADD SELECTED PROJECT CATEGORY TO SUBDIRECTORY URL */
     document.getElementById('subdirectory-url').innerHTML = dropSelected;
 
-}
+    flicker();
 
+    function flicker() {
+
+        document.getElementById('subdirectory-url').className = 'flicker';
+
+        setTimeout(function () {
+            document.getElementById('subdirectory-url').className = '';
+        }, 600);
+    }
+}
 
 
 

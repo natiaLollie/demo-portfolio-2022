@@ -418,6 +418,10 @@ nav {
     scroll-behavior: none;
 }
 
+.flicker {
+    color: red;
+}
+
 /* projects filter */
 #project-filter {
     padding: 0 20px;
