@@ -89,23 +89,15 @@ document.querySelectorAll('.tool').forEach(item => {
 
 // SKILLS 
 
-/*
-let originalUrl = document.getElementById('full-url').innerHTML;
-let project = document.getElementById('project-dropdown');
+let seeAllTags = document.querySelectorAll('.see-all');
+let tagsHidden = document.querySelectorAll('.tags-hidden');
 
-document.querySelectorAll('.skills-folder').forEach(item => {
-    item.addEventListener('click', events => {
-        // log the selected item
-        let selectedFolder = item.alt
-        console.log(selectedFolder);
-        // scroll to  projects section
-        document.getElementById('projects').scrollIntoView();
-        // pass through function, url show "all-projects"
-        filterProjects(selectedFolder, project.selectedIndex = "all");
-        // filter projects by skill 
+for (let i = 0; i < seeAllTags.length; i++) {
+    seeAllTags[i].addEventListener('click', function(){
+        // console.log('see all tags in project button clicked');
+        tagsHidden[i].classList.toggle('tags-hidden');
     })
-})
-*/
+}
 
 
 

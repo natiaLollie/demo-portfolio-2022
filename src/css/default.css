@@ -491,7 +491,11 @@ nav {
 
 .project-card div {
     width: 300px;
-    height: 360px;
+    /* height: 360px; */
+}
+
+.project-card-about {
+    width: 300px;
 }
 
 .project-card-about h3 {
@@ -519,10 +523,9 @@ nav {
     display: none !important;
 }
 
-/* .see-all {
-    display: flex;
-    justify-content: flex-end;
-} */
+.tags-shown {
+    flex-wrap: wrap;
+}
 
 .see-all:hover {
     color: red;
