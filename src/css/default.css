@@ -373,9 +373,9 @@ nav {
 }
 
 .pseudo-browser-toolbar-icons img {
-    padding-top: 5px;
+    padding-top: 10px;
     padding-bottom: 5px;
-    width: 1.2em;
+    width: 1.6em;
 }
 
 .pseudo-dropdown {
