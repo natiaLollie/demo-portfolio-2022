@@ -416,6 +416,7 @@ nav {
     border-color: red;
     transition: none !important;
     scroll-behavior: none;
+    cursor: pointer;
 }
 
 .flicker {
