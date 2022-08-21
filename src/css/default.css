@@ -636,3 +636,67 @@ nav {
     opacity: 1;
     transition: 0.3s;
 }
+
+/* FOOTER */
+
+.footer {
+    background-color: var(--menuColor);
+    font-family: var(--secondaryFont);
+    height: 150px;
+    margin-top: 2em;
+    border-top: 2px var(--borderColor) solid;
+    border-bottom: 2px var(--borderColor) solid;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .main-container {
+    margin: 0;
+}
+
+.footer ul {
+    display: flex;
+}
+
+.footer a {
+    padding: 10px 10px 6px 10px;
+    margin: 0 5px;
+}
+
+.footer #logo {
+    margin: 0;
+}
+
+.footer h4 {
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: none;
+}
+
+.volunteer-wrapper {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+}
+
+.volunteer-card {
+    width: 150px;
+    height: 100px;
+    padding: 1.2rem;
+    margin: auto 2px;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.name-card {
+    margin-top: 4.5%;
+    text-align: center;
+    width: 300px;
+}
