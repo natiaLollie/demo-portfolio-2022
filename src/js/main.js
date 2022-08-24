@@ -87,15 +87,28 @@ document.querySelectorAll('.tool').forEach(item => {
     })
 })
 
+document.getElementById('exit').addEventListener('click', function(){
+    // console.log('exit greeting popup');
+    document.getElementById('greeting-popup').classList.toggle('hidden');
+    document.getElementById('prompt').classList.toggle('hidden');
+})
+
+document.getElementById('prompt').addEventListener('click', function(){
+    // console.log('show greeting popup')
+    document.getElementById('prompt').classList.toggle('hidden');
+    document.getElementById('greeting-popup').classList.toggle('hidden');
+})
+
+
 // SKILLS 
 
 let seeAllTags = document.querySelectorAll('.see-all');
-let tagsHidden = document.querySelectorAll('.tags-hidden');
+let tagsHidden = document.querySelectorAll('.hidden');
 
 for (let i = 0; i < seeAllTags.length; i++) {
     seeAllTags[i].addEventListener('click', function(){
         // console.log('see all tags in project button clicked');
-        tagsHidden[i].classList.toggle('tags-hidden');
+        tagsHidden[i].classList.toggle('hidden');
     })
 }
 
