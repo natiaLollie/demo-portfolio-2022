@@ -250,7 +250,7 @@ nav {
 
 .greeting-box {
     grid-area: greeting-box;
-    border: 2px solid purple;
+    border-left: 3px solid var(--borderColor);
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 18em 1fr;
