@@ -113,8 +113,43 @@ for (let i = 0; i < seeAllTags.length; i++) {
 }
 
 
-
 // CONTACT FORM
+
+const formBtn = document.getElementById('submit-btn');
+formBtn.disabled = true;
+
+document.querySelectorAll('.input-field').forEach(input => {
+    input.addEventListener('input', function(e){
+
+        const nameRequired = document.querySelectorAll('.input-field')[0].value;
+        const emailRequired = document.querySelectorAll('.input-field')[3].value;
+        const messageRequired = document.querySelectorAll('.input-field')[4].value;
+
+        if (nameRequired == "" || emailRequired == "" || messageRequired == "") {
+            // console.log('a required field is empty');
+            formBtn.style.opacity = 0.5;
+            formBtn.disabled = true;
+        } else {
+            // console.log('all required fields have been filled');
+            formBtn.style.opacity = 1;
+            formBtn.disabled = false;
+        }
+    })
+})
+
+function showSubmissionMessage(){
+    // console.log('the email has been sent');
+    
+    // show submission message
+    document.getElementById('submission-message').classList.remove('hidden');
+    // reset form 
+    document.getElementById("contact-form").reset();
+
+    setTimeout(function () {
+        document.getElementById('submission-message').className = 'hidden';
+    }, 5000);
+
+}
 
 
 // SETTINGS MENU

@@ -646,6 +646,15 @@ nav {
     transition: 0s !important;
 }
 
+.contact-wrapper .name {
+    display: flex;
+    justify-content: space-between;
+}
+
+textarea {
+    font-style: italic;
+}
+
 .submit-btn-wrapper {
     padding: 40px 80px;
 }
@@ -666,8 +675,13 @@ nav {
 
 #submit-btn:hover {
     cursor: pointer;
-    opacity: 1;
-    transition: 0.3s;
+}
+
+#submission-message span {
+    color: red;
+    display: flex;
+    justify-content: center;
+            
 }
 
 /* FOOTER */

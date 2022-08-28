@@ -498,7 +498,6 @@
 
             <h1>Contact Me</h1>
 
-
             <div class="contact-container">
 
                 <div class="pseudo-title-bar">
@@ -512,10 +511,19 @@
 
                 <hr>
 
-                <form method="POST" id="contact-form" class="contact-wrapper">
+                <form onsubmit="showSubmissionMessage(); return false;" method="POST" id="contact-form" class="contact-wrapper">
 
-                    <label>Name:</label>
-                    <input class="input-field" type="text" name="name" required>
+                    <div class="name">
+                        <div style="margin-right: 20px;">
+                            <label>First Name:</label>
+                            <input class="input-field" type="text" name="first-name" required>
+                        </div>
+
+                        <div>
+                            <label>Last Name:</label>
+                            <input class="input-field" type="text" name="last-name">
+                        </div>
+                    </div>
 
                     <label>Subject:</label>
                     <input class="input-field" type="text" name="subject">
@@ -524,10 +532,14 @@
                     <input class="input-field" type="text" name="email" required>
 
                     <label>Message:</label>
-                    <textarea class="input-field" rows="10" type="text" name="message" required></textarea>
+                    <textarea class="input-field" placeholder="How can I help you?" rows="10" type="text" name="message" required></textarea>
 
                     <div class="submit-btn-wrapper">
                         <input id="submit-btn" type="submit" value="send">
+                    </div>
+
+                    <div id="submission-message" class="hidden">
+                        <span>Thank you, Your Email has been Sent!</span>
                     </div>
                 </form>
             </div>
@@ -539,6 +551,7 @@
     <!-- Footer -->
 
     <div class="footer">
+        <!-- volunteer -->
         <div class="volunteer-wrapper">
             <div class="volunteer-card">
                 <a target="_blank" href="https://www.womenwhocode.com/"><img class="card-image"
