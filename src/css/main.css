@@ -59,12 +59,12 @@ nav {
 }
 
 .nav-item {
-    color: #000 !important;
+    color: var(--canvasText) !important;
     line-height: 0;
 }
 
-.nav-end span{
-    color: #000;
+.nav-end span {
+    color: var(--canvasText);
 }
 
 .navbar {
@@ -173,11 +173,11 @@ nav {
 }
 
 .greeting-wrapper h1 {
-    color: #000;
+    color: var(--canvasText);
 }
 
 .greeting-wrapper p {
-    color: #000;
+    color: var(--canvasText);
 }
 
 .greeting-wrapper {
@@ -253,7 +253,7 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 18em 1fr;
     grid-template-rows: 1fr 18em 1fr;
-    grid-template-areas: 
+    grid-template-areas:
         '. . . . prompt'
         '. . greeting-popup greeting-popup .'
     ;
@@ -295,7 +295,7 @@ nav {
     text-align: center;
 }
 
-.greeting-intro h1{
+.greeting-intro h1 {
     margin: 0;
 }
 
@@ -362,7 +362,7 @@ nav {
 }
 
 #file-window p {
-    color: #000;
+    color: var(--canvasText);
 }
 
 .skills-folder {
@@ -376,10 +376,12 @@ nav {
 }
 
 @keyframes bounce {
+
     0%,
     100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-10px);
     }
@@ -449,7 +451,7 @@ nav {
 .pseudo-sub-browser-toolbar p {
     font-family: var(--mainFont);
     font-weight: 100px;
-    color: #000;
+    color: var(--canvasText);
 }
 
 #project-dropdown:hover {
@@ -460,7 +462,7 @@ nav {
 }
 
 .pseudo-sub-browser-toolbar span {
-    color: #000;
+    color: var(--canvasText);
 }
 
 .flicker {
@@ -478,7 +480,7 @@ nav {
 }
 
 #project-filter li {
-    color: #000;
+    color: var(--canvasText);
     font-family: var(--secondaryFont);
     font-size: 1.2em;
     margin: 0 20px;
@@ -498,7 +500,7 @@ nav {
     transition: 0s;
 }
 
-.hashtag-active{
+.hashtag-active {
     color: red !important;
 }
 
@@ -508,13 +510,14 @@ nav {
     margin: 0 auto 40px auto;
 }
 
-#project-filter-skillset ul , .project-card-about ul {
+#project-filter-skillset ul,
+.project-card-about ul {
     display: flex;
 }
 
-#project-filter-skillset li  {
+#project-filter-skillset li {
     color: #cecece;
-    font-family: var(--mainFont) ;
+    font-family: var(--mainFont);
     font-style: italic;
     font-weight: lighter;
     margin: 0 5px;
@@ -541,11 +544,11 @@ nav {
 }
 
 .project-card-about h3 {
-    color: #000;
+    color: var(--canvasText);
 }
 
 .project-card-about p {
-    color: #000;
+    color: var(--canvasText);
 }
 
 .project-card-about {
@@ -583,9 +586,9 @@ nav {
 }
 
 .project-card-about a {
-   color: #2B5259 !important;
-   font-style: italic; 
-   font-weight: bold; 
+    color: #2B5259 !important;
+    font-style: italic;
+    font-weight: bold;
 }
 
 .project-card-about a:hover {
@@ -636,7 +639,7 @@ nav {
 }
 
 .pseudo-sub-title-bar span {
-    color: #000;
+    color: var(--canvasText);
 }
 
 .pseudo-sub-title-bar.current-status {
@@ -662,7 +665,7 @@ nav {
 }
 
 #contact-form label {
-    color: #000;
+    color: var(--canvasText);
     line-height: 2.7em;
     text-transform: uppercase;
 }
@@ -697,7 +700,7 @@ textarea {
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
-    color: #000;
+    color: var(--canvasText);
     background-color: var(--buttonColor);
     border: 1px solid var(--borderColor);
     font-family: var(--mainFont);
@@ -714,7 +717,7 @@ textarea {
     color: red;
     display: flex;
     justify-content: center;
-            
+
 }
 
 /* FOOTER */
@@ -781,5 +784,5 @@ textarea {
 }
 
 .name-card p{
-    color: #000;
+    color: var(--canvasText);
 }
