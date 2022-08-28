@@ -59,8 +59,12 @@ nav {
 }
 
 .nav-item {
-    color: black !important;
+    color: #000 !important;
     line-height: 0;
+}
+
+.nav-end span{
+    color: #000;
 }
 
 .navbar {
@@ -166,6 +170,14 @@ nav {
     background-color: var(--containerColor);
     border: 3px solid var(--borderColor);
     margin: 5em auto;
+}
+
+.greeting-wrapper h1 {
+    color: #000;
+}
+
+.greeting-wrapper p {
+    color: #000;
 }
 
 .greeting-wrapper {
@@ -345,6 +357,10 @@ nav {
     letter-spacing: 2px;
 }
 
+#file-window p {
+    color: #000;
+}
+
 .skills-folder {
     width: 4em;
 }
@@ -429,6 +445,7 @@ nav {
 .pseudo-sub-browser-toolbar p {
     font-family: var(--mainFont);
     font-weight: 100px;
+    color: #000;
 }
 
 #project-dropdown:hover {
@@ -438,8 +455,12 @@ nav {
     cursor: pointer;
 }
 
+.pseudo-sub-browser-toolbar span {
+    color: #000;
+}
+
 .flicker {
-    color: red;
+    color: red !important;
 }
 
 /* projects filter */
@@ -453,6 +474,7 @@ nav {
 }
 
 #project-filter li {
+    color: #000;
     font-family: var(--secondaryFont);
     font-size: 1.2em;
     margin: 0 20px;
@@ -512,6 +534,14 @@ nav {
 .project-card div {
     width: 300px;
     /* height: 360px; */
+}
+
+.project-card-about h3 {
+    color: #000;
+}
+
+.project-card-about p {
+    color: #000;
 }
 
 .project-card-about {
@@ -601,6 +631,10 @@ nav {
     justify-content: center;
 }
 
+.pseudo-sub-title-bar span {
+    color: #000;
+}
+
 .pseudo-sub-title-bar.current-status {
     grid-template-columns: 1fr;
 }
@@ -624,6 +658,7 @@ nav {
 }
 
 #contact-form label {
+    color: #000;
     line-height: 2.7em;
     text-transform: uppercase;
 }
@@ -658,7 +693,7 @@ textarea {
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
-    color: var(--mainText);
+    color: #000;
     background-color: var(--buttonColor);
     border: 1px solid var(--borderColor);
     font-family: var(--mainFont);
@@ -739,4 +774,8 @@ textarea {
     margin-top: 4.5%;
     text-align: center;
     width: 300px;
+}
+
+.name-card p{
+    color: #000;
 }

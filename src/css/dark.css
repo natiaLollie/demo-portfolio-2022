@@ -1,14 +1,14 @@
 /* font-family: 'Inconsolata', monospace; */
 :root {
-    /* --mainColor: #2c3031 ; */
-    --mainColor: rgb(22 37 89);
+    --mainColor: #104A61;
     --containerColor: #fff;
     --pseudoTitleBar: #B4BFAB;
 
     --menuColor: #F3F0E8;
     --borderColor: #B4BFAB;
 
-    --mainText: #000;
+    /* --mainText: #E7E9EB; */
+    --mainText: #fff;
     --secondaryTextColor: #fff;
     --specialTextColor: #C5CFC2;
 
