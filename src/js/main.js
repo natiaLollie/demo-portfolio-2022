@@ -62,11 +62,11 @@ changeTheme.onclick = function () {
     document.head.classList.toggle('theme-style');
 
     if (document.head.classList.contains('theme-style')) {
-        icon.src = '_imgs/dark_mode.svg';
+        icon.src = '_imgs/icons/dark_mode.svg';
         theme.href = "css/dark.css";
     } else {
-        icon.src = '_imgs/light_mode.svg';
-        theme.href = "css/default.css";
+        icon.src = '_imgs/icons/light_mode.svg';
+        theme.href = "css/light.css";
     }
 }
 
@@ -138,7 +138,7 @@ document.querySelectorAll('.input-field').forEach(input => {
 })
 
 function showSubmissionMessage(){
-    // console.log('the email has been sent');
+    console.log('the email has been sent');
 
     // hide resume link
     document.getElementById('resume-link').classList.toggle('hidden');
@@ -150,7 +150,6 @@ function showSubmissionMessage(){
     setTimeout(function () {
         document.getElementById('submission-message').className = 'hidden';
         document.getElementById('resume-link').classList.toggle('hidden');
-        showResume();
     }, 5000);
 
 }

@@ -1,7 +1,5 @@
-/* font-family: 'Inconsolata', monospace; */
 :root {
-    /* --mainColor: #2c3031 ; */
-    --mainColor: rgb(22 37 89);
+    --mainColor: #2E8AAD;
     --containerColor: #fff;
     --pseudoTitleBar: #B4BFAB;
 
@@ -17,4 +15,3 @@
 
     --buttonColor: #C5CFC2;
 }
-

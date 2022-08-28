@@ -1,22 +1,4 @@
 /* font-family: 'Inconsolata', monospace; */
-:root {
-    --mainColor: #2E8AAD;
-    --containerColor: #fff;
-    --pseudoTitleBar: #B4BFAB;
-
-    --menuColor: #F3F0E8;
-    --borderColor: #B4BFAB;
-
-    --mainText: #000;
-    --secondaryTextColor: #fff;
-    --specialTextColor: #C5CFC2;
-
-    --mainFont: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --secondaryFont: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-    --buttonColor: #C5CFC2;
-}
-
 * {
     box-sizing: border-box;
     padding: 0;
