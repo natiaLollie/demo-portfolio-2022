@@ -139,14 +139,18 @@ document.querySelectorAll('.input-field').forEach(input => {
 
 function showSubmissionMessage(){
     // console.log('the email has been sent');
-    
+
+    // hide resume link
+    document.getElementById('resume-link').classList.toggle('hidden');
     // show submission message
     document.getElementById('submission-message').classList.remove('hidden');
     // reset form 
-    document.getElementById("contact-form").reset();
+    document.getElementById("contact-form").reset();    
 
     setTimeout(function () {
         document.getElementById('submission-message').className = 'hidden';
+        document.getElementById('resume-link').classList.toggle('hidden');
+        showResume();
     }, 5000);
 
 }

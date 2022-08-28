@@ -602,9 +602,21 @@ nav {
 
 /* CONTACT FORM */
 
+#contact {
+    margin-bottom: 10em;
+}
+
 .contact-container {
     width: 40%;
-    margin: 5em auto 10em auto;
+    margin: 5em auto 1em auto;
+}
+
+#resume-link a {
+    color: #464646 !important;
+    font-style: italic;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
 }
 
 .pseudo-sub-title-bar.current-status {
