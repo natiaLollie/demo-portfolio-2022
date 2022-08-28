@@ -103,12 +103,12 @@ document.getElementById('prompt').addEventListener('click', function(){
 // SKILLS 
 
 let seeAllTags = document.querySelectorAll('.see-all');
-let tagsHidden = document.querySelectorAll('.hidden');
+let tagsHidden = document.querySelectorAll('.tags-hidden');
 
 for (let i = 0; i < seeAllTags.length; i++) {
     seeAllTags[i].addEventListener('click', function(){
         // console.log('see all tags in project button clicked');
-        tagsHidden[i].classList.toggle('hidden');
+        tagsHidden[i].classList.toggle('tags-hidden');
     })
 }
 

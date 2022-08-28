@@ -242,6 +242,10 @@ nav {
     display: none !important;
 }
 
+.tags-hidden {
+    display: none !important;
+}
+
 .greeting-box {
     grid-area: greeting-box;
     border-left: 3px solid var(--borderColor);
