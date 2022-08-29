@@ -1,6 +1,5 @@
 //AFTER PAGE LOADS
 window.onload = function () {
-    // alert('it worked');
     document.querySelector('body').style.transition = '1.0s';
 }
 
@@ -55,28 +54,6 @@ function autoDateTimeUpdate() {
 
 setInterval(autoDateTimeUpdate, 1);
 
-
-// WEBSITE THEME
-
-function siteTheme() {
-
-    console.log('theme switch entered');
-
-    let icon = document.getElementById("icon");
-    let theme = document.getElementsByClassName('theme');
-    let themeContainer = document.getElementById('theme-container');
-
-    themeContainer.classList.toggle('theme-style');
-
-    if (document.getElementById('theme-container').classList.contains('theme-style')) {
-        icon.src = '_imgs/icons/light_mode.svg';
-        document.getElementById('theme-container').href = "css/light.css";
-    } else {
-        icon.src = '_imgs/icons/dark_mode.svg';
-        document.getElementById('theme-container').href = "css/dark.css";
-
-    }  
-}
 
 // GREETING TOOLBOX 
 
