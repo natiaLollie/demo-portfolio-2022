@@ -1,3 +1,9 @@
+//AFTER PAGE LOADS
+window.onload = function () {
+    // alert('it worked');
+    document.querySelector('body').style.transition = '1.0s';
+}
+
 // MAIN MENU CLOCK
 
 function autoDateTimeUpdate() {
