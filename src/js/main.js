@@ -56,26 +56,27 @@ function autoDateTimeUpdate() {
 setInterval(autoDateTimeUpdate, 1);
 
 
-// CHANGE WEBSITE THEME
+// WEBSITE THEME
 
-let changeTheme = document.getElementById('theme-icon');
+function siteTheme() {
 
-changeTheme.onclick = function () {
+    console.log('theme switch entered');
 
     let icon = document.getElementById("icon");
-    let theme = document.getElementById("theme");
+    let theme = document.getElementsByClassName('theme');
+    let themeContainer = document.getElementById('theme-container');
 
-    document.head.classList.toggle('theme-style');
+    themeContainer.classList.toggle('theme-style');
 
-    if (document.head.classList.contains('theme-style')) {
-        icon.src = '_imgs/icons/dark_mode.svg';
-        theme.href = "css/dark.css";
-    } else {
+    if (document.getElementById('theme-container').classList.contains('theme-style')) {
         icon.src = '_imgs/icons/light_mode.svg';
-        theme.href = "css/light.css";
-    }
-}
+        document.getElementById('theme-container').href = "css/light.css";
+    } else {
+        icon.src = '_imgs/icons/dark_mode.svg';
+        document.getElementById('theme-container').href = "css/dark.css";
 
+    }  
+}
 
 // GREETING TOOLBOX 
 
