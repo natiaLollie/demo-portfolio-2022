@@ -148,6 +148,19 @@ nav {
     transition: 0s;
 }
 
+/* ALERT BANNER */
+
+#alert-banner .main-container {
+    height: 150px;
+}
+
+#theme-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
 /* MAIN */
 
 /* icon placeholder */
@@ -162,7 +175,11 @@ nav {
 
 /* INTRO */
 
-.greeting-wrapper,
+.greeting-wrapper {
+    background-color: var(--containerColor);
+    border: 3px solid var(--borderColor);
+}
+
 .skills-wrapper,
 .projects-wrapper,
 .contact-container {
