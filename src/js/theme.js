@@ -13,8 +13,6 @@ let themeContainer = document.getElementById('theme-container');
 let currentTheme;
 let defaultTheme = themeContainer.href = "css/light.css"
 
-let themeSavedMessage = document.getElementById('theme-message');
-
 function siteTheme() {
 
     themeContainer.classList.toggle('theme');
@@ -23,22 +21,14 @@ function siteTheme() {
         icon.src = '_imgs/icons/light_mode.svg';
         themeContainer.href = "css/light.css";
         currentTheme = 'light-mode';
-        showThemeMessage();
+
     } else {
         icon.src = '_imgs/icons/dark_mode.svg';
         themeContainer.href = "css/dark.css";
         currentTheme = 'dark-mode';
-        showThemeMessage();
     }
 
-    function showThemeMessage(){
-        themeSavedMessage.classList.toggle('hidden');
-        setTimeout(function(){
-            themeSavedMessage.classList.toggle('hidden');
-        }, 1500);
-    }
-
-    // console.log(currentTheme); 
+    // console.log(currentTheme);  
 
     /* save theme to local storage */
     localStorage.setItem('SiteTheme', JSON.stringify(currentTheme));
