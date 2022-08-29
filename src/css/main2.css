@@ -1,0 +1,77 @@
+a {
+ color: #000 !important;
+}
+
+.navbar .flex {
+    display: flex;
+    justify-content: center;
+}
+
+#logo {
+    margin: 0;
+}
+
+.project-wrapper,
+.technologies-wrapper,
+.showcase-wrapper,
+.code-wrapper {
+    margin: 3em auto;
+    line-height: 2;
+}
+
+#project-title {
+    height: 200px;
+}
+
+#project-title h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 0;
+}
+
+#project h1 {
+    margin-top: 0;
+}
+
+#technologies ul {
+    list-style: circle;
+    margin-left: 50px;
+}
+
+.dropdown ul {
+    list-style: circle;
+    line-height: 3;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.showcase-card {
+    display: flex;
+    justify-content: center;
+}
+
+.images {
+    width: 80%;
+    height: 80%;
+    padding: 1.2rem;
+    margin: auto 2px;
+}
+
+.showcase-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.footer {
+    margin-top: 8em;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+
+
