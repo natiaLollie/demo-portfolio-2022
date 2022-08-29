@@ -58,12 +58,12 @@ nav {
 }
 
 .nav-item {
-    color: #000 !important;
+    color: var(--canvasText) !important;
     line-height: 0;
 }
 
 .nav-end span{
-    color: #000;
+    color: var(--canvasText);
 }
 
 .navbar {
@@ -148,6 +148,19 @@ nav {
     transition: 0s;
 }
 
+/* ALERT BANNER */
+
+#alert-banner .main-container {
+    height: 150px;
+}
+
+#theme-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
 /* MAIN */
 
 /* icon placeholder */
@@ -162,7 +175,11 @@ nav {
 
 /* INTRO */
 
-.greeting-wrapper,
+.greeting-wrapper {
+    background-color: var(--containerColor);
+    border: 3px solid var(--borderColor);
+}
+
 .skills-wrapper,
 .projects-wrapper,
 .contact-container {
@@ -172,11 +189,11 @@ nav {
 }
 
 .greeting-wrapper h1 {
-    color: #000;
+    color: var(--canvasText);
 }
 
 .greeting-wrapper p {
-    color: #000;
+    color: var(--canvasText);
 }
 
 .greeting-wrapper {
@@ -361,7 +378,7 @@ nav {
 }
 
 #file-window p {
-    color: #000;
+    color: var(--canvasText);
 }
 
 .skills-folder {
@@ -448,7 +465,7 @@ nav {
 .pseudo-sub-browser-toolbar p {
     font-family: var(--mainFont);
     font-weight: 100px;
-    color: #000;
+    color: var(--canvasText);
 }
 
 #project-dropdown:hover {
@@ -459,7 +476,7 @@ nav {
 }
 
 .pseudo-sub-browser-toolbar span {
-    color: #000;
+    color: var(--canvasText);
 }
 
 .flicker {
@@ -477,7 +494,7 @@ nav {
 }
 
 #project-filter li {
-    color: #000;
+    color: var(--canvasText);
     font-family: var(--secondaryFont);
     font-size: 1.2em;
     margin: 0 20px;
@@ -540,11 +557,11 @@ nav {
 }
 
 .project-card-about h3 {
-    color: #000;
+    color: var(--canvasText);
 }
 
 .project-card-about p {
-    color: #000;
+    color: var(--canvasText);
 }
 
 .project-card-about {
@@ -635,7 +652,7 @@ nav {
 }
 
 .pseudo-sub-title-bar span {
-    color: #000;
+    color: var(--canvasText);
 }
 
 .pseudo-sub-title-bar.current-status {
@@ -661,7 +678,7 @@ nav {
 }
 
 #contact-form label {
-    color: #000;
+    color: var(--canvasText);
     line-height: 2.7em;
     text-transform: uppercase;
 }
@@ -696,7 +713,7 @@ textarea {
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
-    color: #000;
+    color: var(--canvasText);
     background-color: var(--buttonColor);
     border: 1px solid var(--borderColor);
     font-family: var(--mainFont);
@@ -780,5 +797,5 @@ textarea {
 }
 
 .name-card p{
-    color: #000;
+    color: var(--canvasText);
 }
