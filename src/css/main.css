@@ -131,7 +131,7 @@ nav {
     font-size: 1.2em;
     text-transform: uppercase;
     padding-top: 6px;
-    margin: auto 35px auto 0;
+    margin: auto 35px auto -20px;
     border-bottom: none;
 }
 
@@ -798,4 +798,107 @@ textarea {
 
 .name-card p{
     color: var(--canvasText);
+}
+
+/* INTERNAL POST PAGES */
+
+#post h1 {
+    margin-top: 0;
+}
+
+#post h1, p, li {
+    color: var(--mainText);
+}
+
+div.navbar-post .flex {
+    justify-content: center;
+}
+
+div.navbar-post nav {
+    margin: 0;
+}
+
+div.navbar-post #logo {
+    margin: 0;
+}
+
+.project-post-wrapper,
+.technologies-post-wrapper,
+.showcase-post-wrapper,
+.code-post-wrapper {
+    margin: 3em auto;
+    line-height: 2.5;
+    font-size: 18px;
+}
+
+div#project-title-post {
+    height: 200px;
+}
+
+div#project-title-post h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 0;
+}
+
+section#project-post h1 {
+    margin-top: 0;
+}
+
+.technologies-post-wrapper div {
+    display: flex;
+    flex-direction: row;
+} 
+
+.technologies-post-wrapper ul {
+    line-height: 3;
+    list-style: circle;
+    margin-left: 20px;
+}
+
+.technologies-post-wrapper ul + ul {
+    margin-left: 60px;
+}
+
+.showcase-links ul {
+    list-style: circle;
+    line-height: 3;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.showcase-links ul li a {
+    color: var(--mainText) !important;
+}
+
+.showcase-links ul li a:hover {
+    color: #fff !important;
+}
+
+.showcase-cards {
+    display: flex;
+    justify-content: center;
+}
+
+.showcase-images-container {
+    width: 80%;
+    height: 80%;
+    padding: 1.2rem;
+    margin: auto 2px;
+}
+
+div.showcase-images-container a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#post .footer {
+   margin-top: 8em;
+}
+
+#post .footer ul {
+    list-style: none;
 }
