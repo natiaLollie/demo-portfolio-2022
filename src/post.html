@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head id="post-page">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,6 +28,12 @@
             </nav>
         </div>
     </div>
+
+
+    <div id="theme-message" class="hidden">
+        <span>The Settings Have Been Applied Site Wide and Saved For Your Next Visit!</span>
+    </div>
+
 
     <div id="project-title-post">
         <h1>Project Name</h1>
@@ -170,6 +176,20 @@
             <p><b>github.com/</b>natiaLollie</p>
         </div>
     </div>
+
+    <!-- <script>
+        let getTheme = JSON.parse(localStorage.getItem('SiteTheme'));
+        console.log(getTheme);
+
+        if (getTheme == 'dark-mode'){
+            let themeContainer = document.querySelector('#post-page #theme-container');
+
+            console.log(themeContainer);
+
+            themeContainer.href = 'css/dark.css';
+        } 
+    </script> -->
+    <script src="js/theme.js"></script>
 
 </body>
 

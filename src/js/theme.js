@@ -10,6 +10,7 @@
 // WEBSITE THEME
 let icon = document.getElementById("icon");
 let themeContainer = document.getElementById('theme-container');
+let postThemeContainer = document.querySelector('#post-page #theme-container');
 let currentTheme;
 let defaultTheme = themeContainer.href = "css/light.css"
 
@@ -51,5 +52,7 @@ console.log(`current saved theme: ${getTheme}`);
 if (getTheme === 'dark-mode') {
     themeContainer.classList.toggle('theme');
     themeContainer.href = "css/dark.css";
-    defaultTheme = "css/dark.css"
+    defaultTheme = "css/dark.css";
+
+    postThemeContainer.href = 'css/dark.css';
 }
