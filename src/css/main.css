@@ -810,15 +810,15 @@ textarea {
     color: var(--mainText);
 }
 
-div.navbar-post .flex {
-    justify-content: center;
+#post div.navbar-post .flex {
+    justify-content: space-between;
 }
 
-div.navbar-post nav {
+#post div.navbar-post nav {
     margin: 0;
 }
 
-div.navbar-post #logo {
+#post div.navbar-post #logo {
     margin: 0;
 }
 
@@ -831,11 +831,11 @@ div.navbar-post #logo {
     font-size: 18px;
 }
 
-div#project-title-post {
+#post div#project-title-post {
     height: 200px;
 }
 
-div#project-title-post h1{
+#post div#project-title-post h1{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -909,3 +909,5 @@ div.showcase-images-container a img {
     -webkit-filter: invert(100%);
     filter: invert(100%);
 }
+
+
