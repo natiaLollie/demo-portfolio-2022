@@ -773,6 +773,7 @@ textarea {
     display: flex;
     align-items: center;
     overflow-x: auto;
+    height: 100%;
 }
 
 .volunteer-card {
@@ -790,13 +791,14 @@ textarea {
     filter: grayscale(100%);
 }
 
-.name-card {
-    margin-top: 4.5%;
+.footer-rights {
+    position: relative;
+    top: 50%;
     text-align: center;
     width: 300px;
 }
 
-.name-card p{
+.footer-rights p{
     color: var(--canvasText);
 }
 

@@ -56,6 +56,8 @@
                     <img id="icon" src="_imgs/icons/light_mode.svg" alt="">
                 </div>
 
+                <theme-settings></theme-settings>
+
                 <!-- WEBSITE SETTINGS 
                 <div id="settings-icon" class="flex">
                     <img id="settings" src="_imgs/icons/settings.svg" alt="">
@@ -155,7 +157,7 @@
                         <div class="greeting-intro">
                             <h1>HOWDY</h1>
                             <p>
-                                I am <b>Natia Lollie</b> I am a Web Developer with a 
+                                I am <b>Natia Lollie</b> I am a Web Developer with a
                                 <br>
                                 primary focus on advanced Javascript + Angular
                                 <br>
@@ -526,7 +528,8 @@
 
                 <hr>
 
-                <form id="contact-form" class="contact-wrapper" method="POST" onsubmit="showSubmissionMessage(); return false;" >
+                <form id="contact-form" class="contact-wrapper" method="POST"
+                    onsubmit="showSubmissionMessage(); return false;">
 
                     <div class="name">
                         <div style="margin-right: 20px;">
@@ -572,16 +575,9 @@
 
     <div class="footer">
         <!-- volunteer -->
-        <div class="volunteer-wrapper">
-            <div class="volunteer-card">
-                <a target="_blank" href="https://www.womenwhocode.com/"><img class="card-image"
-                        src="_imgs/thumbnails/volunteer/women-who-code1.png" alt="Women Who Code"></a>
-            </div>
-            <div class="volunteer-card">
-                <a target="_blank" href="https://seattlegivecamp.org/"><img class="card-image"
-                        src="_imgs/thumbnails/volunteer/seattle-give-camp1.png" alt="Seattle Give Camp"></a>
-            </div>
-        </div>
+
+        <volunteer-icons></volunteer-icons>
+
         <div class="main-container flex">
             <div>
                 <ul>
@@ -593,17 +589,16 @@
                 </ul>
             </div>
         </div>
-        <div class="name-card">
-            <p><b>github.com/</b>natiaLollie</p>
-        </div>
+
+        <footer-rights></footer-rights>
+
     </div>
-
-
 
     <!-- Script -->
     <script src="js/main.js"> </script>
     <script src="js/filter.js"></script>
     <script src="js/theme.js"></script>
+    <script src="js/component.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script> -->
