@@ -332,6 +332,18 @@ nav {
     text-align: center;
 }
 
+.stripes {
+    background: repeating-linear-gradient(180deg,
+        #9FA897 2px,
+        #B4BFAB 6px,
+        #9FA897 3.5px);
+}
+
+.stripes div {
+    background: var(--borderColor);
+    height: 100%;
+}
+
 .pseudo-sub-title-bar {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -350,6 +362,7 @@ nav {
 /* ABOUT */
 
 .about-wrapper p {
+    font-size: 18px;
     margin-top: 3em;
     line-height: 2em;
     letter-spacing: 1.5px;
@@ -798,8 +811,8 @@ textarea {
     width: 300px;
 }
 
-.footer-rights p{
-    color: var(--canvasText);
+.footer-rights a{
+    color: var(--canvasText) !important;
 }
 
 /* INTERNAL POST PAGES */

@@ -36,7 +36,7 @@ function siteTheme() {
         themeSavedMessage.classList.toggle('hidden');
         setTimeout(function(){
             themeSavedMessage.classList.toggle('hidden');
-        }, 1500);
+        }, 6200);
     }
 
     // console.log(currentTheme); 
