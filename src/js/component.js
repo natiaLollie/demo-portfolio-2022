@@ -21,6 +21,7 @@ class Rights extends HTMLElement {
         <div class="footer-rights">
             <p><a target="_blank" href="https://github.com/natiaLollie"><b>github.com/</b>natiaLollie</a></p>
             <!--<p>Portfolio designed and developed by Natia Lollie | github.com/natiaLollie</p>-->
+            <p class="mobile-resume" style="font-size: 12px; padding-top: 10px;"><a target="_blank" href="#"><em>Download Resume</em></a></p>
         </div>
         `
     }
