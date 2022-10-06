@@ -555,7 +555,7 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 40px;
-    padding: 0 60px;
+    padding: 0 4%;
     width: 100%;
 }
 
@@ -946,6 +946,12 @@ div.showcase-images-container a img {
 
     .contact-container {
         width: 55%;
+    }
+}
+
+@media (min-width:800px) and (max-width:1096px) {
+    .project-card {
+        padding: 0 3rem;
     }
 }
 
