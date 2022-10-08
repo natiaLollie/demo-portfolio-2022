@@ -1,39 +1,22 @@
 :root {
+    /* primary */
     --mainColor: #2E8AAD;
-    --containerColor: #fff;
-    --pseudoTitleBar: #B4BFAB;
-
     --menuColor: #F3F0E8;
     --borderColor: #B4BFAB;
+    --buttonColor: #C5CFC2;
 
-    --mainText: #181818;
-    --canvasText: #000;
-    
+    /* container */
+    --pseudoTitleBar: #B4BFAB;
+    --containerColor: #fff;
+    --containerTextColor: #000;
+
+    /* font color */
+    --mainTextColor: #181818;
     --secondaryTextColor: #fff;
     --specialTextColor: #C5CFC2;
 
-    --mainFont: 'Segoe UI', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
-    --secondaryFont: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-    /* --secondaryFont: -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        "Roboto",
-        "Oxygen",
-        "Ubuntu",
-        "Cantarell",
-        "Fira Sans",
-        "Droid Sans",
-        "Helvetica Neue",
-        sans-serif; */
-    /* --secondaryFont: -apple-system,
-        system-ui,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        "Helvetica Neue",
-        Arial,
-        sans-serif; */
-
-    --buttonColor: #C5CFC2;
+    /* fonts */
+    --defaultFont: 'Trebuchet MS', 'Helvetica', 'Roboto', sans-serif;
+    --menuFont: 'Chicago', 'Gemunu Libre', sans-serif;
+    --windowTitle: 'Chicago', 'Gemunu Libre', sans-serif;
 }

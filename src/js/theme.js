@@ -7,6 +7,11 @@
  * 
  **/
 
+//AFTER PAGE LOADS
+window.onload = function () {
+    document.querySelector('body').style.transition = '1.0s';
+}
+
 // WEBSITE THEME
 let icon = document.getElementById("icon");
 let themeContainer = document.getElementById('theme-container');

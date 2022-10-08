@@ -1,4 +1,45 @@
-/* font-family: 'Inconsolata', monospace; */
+@font-face {
+    font-family: 'Chicago';
+    src: url('/fonts/chicagoflf-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe UI Bold';
+    src: url('/fonts/segoe-ui-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Trebuchet MS';
+    src: url('/fonts/trebuchet-ms.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Trebuchet MS Bold';
+    src: url('/fonts/trebuchet-ms-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('/fonts/helvetica-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Light';
+    src: url('/fonts/helvetica-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -17,8 +58,8 @@ h4,
 h5,
 h6,
 strong {
-    color: var(--mainText);
-    font-family: var(--mainFont);
+    color: var(--mainTextColor);
+    font-family: var(--defaultFont);
     font-weight: 100;
     margin-top: 5em;
     text-transform: uppercase;
@@ -30,8 +71,8 @@ span,
 label,
 input,
 textarea {
-    color: var(--mainText);
-    font-family: var(--secondaryFont);
+    color: var(--mainTextColor);
+    font-family: var(--defaultFont);
 }
 
 a {
@@ -58,17 +99,17 @@ nav {
 }
 
 .nav-item {
-    color: var(--canvasText) !important;
+    color: var(--containerTextColor) !important;
     line-height: 0;
 }
 
 .nav-end span {
-    color: var(--canvasText);
+    font-family: var(--defaultFont);
+    color: var(--containerTextColor);
 }
 
 .navbar {
     background-color: var(--menuColor);
-    font-family: var(--secondaryFont);
     height: 50px;
     margin-top: 2em;
     border-top: 2px var(--borderColor) solid;
@@ -81,6 +122,8 @@ nav {
 }
 
 .navbar a {
+    font-family: var(--defaultFont);
+    font-size: 17px;
     padding: 10px 10px 6px 10px;
     margin: 0 5px;
 }
@@ -126,7 +169,7 @@ nav {
 }
 
 #logo {
-    font-family: var(--mainFont);
+    font-family: 'Segoe UI Bold';
     font-weight: bold;
     font-size: 1.2em;
     text-transform: uppercase;
@@ -189,11 +232,12 @@ nav {
 }
 
 .greeting-wrapper h1 {
-    color: var(--canvasText);
+    color: var(--containerTextColor);
+    font-family: var(--defaultFont);
 }
 
 .greeting-wrapper p {
-    color: var(--canvasText);
+    color: var(--containerTextColor);
 }
 
 .greeting-wrapper {
@@ -247,6 +291,10 @@ nav {
     width: 7em;
 }
 
+#tool-guide p:first-child {
+    font-family: var(--menuFont);
+}
+
 #selected-tool {
     font-style: italic;
     font-size: 14px;
@@ -283,6 +331,11 @@ nav {
     margin-top: 1em;
 }
 
+#prompt-message {
+    font-family: var(--defaultFont);
+    text-transform: capitalize;
+}
+
 #greeting-popup {
     grid-area: greeting-popup;
 
@@ -312,7 +365,13 @@ nav {
 }
 
 .greeting-intro h1 {
+    font-family: var(--menuFont);
+    text-transform: capitalize;
     margin: 0;
+}
+
+.greeting-intro span {
+    color: #181818;
 }
 
 .pseudo-utility {
@@ -326,8 +385,9 @@ nav {
     padding-top: 5px;
     padding-bottom: 5px;
     background-color: var(--pseudoTitleBar);
-    font-family: var(--secondaryFont);
-    letter-spacing: 2px;
+    color: #181818;
+    font-family: var(--windowTitle);
+    letter-spacing: 1.5px;
     text-transform: uppercase;
     text-align: center;
 }
@@ -362,7 +422,7 @@ nav {
 /* ABOUT */
 
 .about-wrapper p {
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 3em;
     line-height: 2em;
     letter-spacing: 1.5px;
@@ -391,7 +451,7 @@ nav {
 }
 
 #file-window p {
-    color: var(--canvasText);
+    color: var(--containerTextColor);
 }
 
 .skills-folder {
@@ -470,9 +530,9 @@ nav {
 }
 
 .pseudo-sub-browser-toolbar p {
-    font-family: var(--mainFont);
+    font-family: var(--defaultFont);
     font-weight: 100px;
-    color: var(--canvasText);
+    color: var(--containerTextColor);
 }
 
 #project-dropdown:hover {
@@ -483,7 +543,7 @@ nav {
 }
 
 .pseudo-sub-browser-toolbar span {
-    color: var(--canvasText);
+    color: var(--containerTextColor);
 }
 
 .flicker {
@@ -501,8 +561,8 @@ nav {
 }
 
 #project-filter li {
-    color: var(--canvasText);
-    font-family: var(--secondaryFont);
+    color: var(--containerTextColor);
+    font-family: var(--defaultFont);
     font-size: 1.2em;
     margin: 0 20px;
     letter-spacing: 2px;
@@ -537,8 +597,8 @@ nav {
 }
 
 #project-filter-skillset li {
-    color: #cecece;
-    font-family: var(--mainFont);
+    color: #acacac;
+    font-family: var(--defaultFont);
     font-style: italic;
     font-weight: lighter;
     margin: 0 5px;
@@ -560,16 +620,15 @@ nav {
 }
 
 .project-card div {
-    width: 300px;
-    /* height: 360px; */
+    width: 310px;
 }
 
 .project-card-about h3 {
-    color: var(--canvasText);
+    color: var(--containerTextColor);
 }
 
 .project-card-about p {
-    color: var(--canvasText);
+    color: var(--containerTextColor);
 }
 
 .project-card-about {
@@ -577,13 +636,14 @@ nav {
 }
 
 .project-card-about h3 {
-    margin: 0 auto 10px auto;
+    margin: 8px auto 10px auto;
+    font-family: 'Segoe UI Bold';
     font-weight: bold;
 }
 
 .project-card-about li {
-    color: #cecece;
-    font-family: var(--mainFont);
+    color: #acacac;
+    font-family: var(--defaultFont);
     font-weight: lighter;
     margin-right: 5px;
     margin-bottom: 10px;
@@ -591,10 +651,6 @@ nav {
 
 .project-card-about p {
     margin-top: 10px;
-}
-
-.tags {
-    color: #cecece;
 }
 
 .tags-shown {
@@ -637,7 +693,7 @@ nav {
 }
 
 .project-card-about {
-    margin: 20px auto;
+    margin: 20px auto 30px auto;
 }
 
 /* CONTACT FORM */
@@ -653,14 +709,19 @@ nav {
 
 #resume-link a {
     color: #464646 !important;
+    font-family: 'Trebuchet MS Bold';
     font-style: italic;
     font-weight: bold;
     display: flex;
     justify-content: center;
 }
 
+#resume-link a:hover {
+    color: red !important;
+}
+
 .pseudo-sub-title-bar span {
-    color: var(--canvasText);
+    color: var(--containerTextColor);
 }
 
 .pseudo-sub-title-bar.current-status {
@@ -682,11 +743,11 @@ nav {
     max-width: 450px;
     min-height: 600px;
     padding: 25px;
-    font-family: var(--secondaryFont);
+    font-family: var(--defaultFont);
 }
 
 #contact-form label {
-    color: var(--canvasText);
+    color: var(--containerTextColor);
     line-height: 2.7em;
     text-transform: uppercase;
 }
@@ -721,10 +782,10 @@ textarea {
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
-    color: var(--canvasText);
+    color: var(--containerTextColor);
     background-color: var(--buttonColor);
     border: 1px solid var(--borderColor);
-    font-family: var(--mainFont);
+    font-family: var(--defaultFont);
     font-size: 1em;
     text-transform: uppercase;
     opacity: 0.5;
@@ -764,6 +825,7 @@ textarea {
 
 .footer a {
     padding: 10px 10px 6px 10px;
+    font-size: 17px;
 }
 
 .footer #logo {
@@ -807,7 +869,7 @@ textarea {
 }
 
 .footer-rights a {
-    color: var(--canvasText) !important;
+    color: var(--containerTextColor) !important;
 }
 
 .footer .mobile-resume {
@@ -827,7 +889,7 @@ textarea {
 #post h1,
 p,
 li {
-    color: var(--mainText);
+    color: var(--mainTextColor);
 }
 
 #post div.navbar-post .flex {
@@ -848,7 +910,7 @@ li {
 .code-post-wrapper {
     margin: 3em auto;
     line-height: 2.5;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 #post div#project-title-post {
@@ -890,7 +952,7 @@ section#project-post h1 {
 }
 
 .showcase-links ul li a {
-    color: var(--mainText) !important;
+    color: var(--mainTextColor) !important;
 }
 
 .showcase-links ul li a:hover {
@@ -1092,7 +1154,7 @@ div.showcase-images-container a img {
     }
 
     .project-card div {
-        width: 85%;
+        width: 80%;
     }
 
     .project-card-about {
@@ -1158,6 +1220,9 @@ div.showcase-images-container a img {
 }
 
 @media screen and (max-width: 600px) {
+    .project-card div {
+        width: 90%;
+    }
     .contact-container {
         width: 95%;
     }

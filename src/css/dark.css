@@ -1,21 +1,22 @@
-/* font-family: 'Inconsolata', monospace; */
 :root {
+    /* primary */
     --mainColor: #33374D;
-    --containerColor: #fff;
-    --pseudoTitleBar: #B4BFAB;
-
     --menuColor: #F3F0E8;
     --borderColor: #B4BFAB;
+    --buttonColor: #C5CFC2;
 
-    --mainText: #fff;
-    --canvasText: #000;
+    /* container */
+    --pseudoTitleBar: #B4BFAB;
+    --containerColor: #fff;
+    --containerTextColor: #000;
 
+    /* font color */
+    --mainTextColor: #fff;
     --secondaryTextColor: #fff;
     --specialTextColor: #C5CFC2;
 
-    --mainFont: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --secondaryFont: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-    --buttonColor: #C5CFC2;
+    /* fonts */
+    --defaultFont: 'Trebuchet MS', 'Helvetica', 'Roboto', sans-serif;
+    --menuFont: 'Chicago', 'Gemunu Libre', sans-serif;
+    --windowTitle: 'Chicago', 'Gemunu Libre', sans-serif;
 }
-
