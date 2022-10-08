@@ -14,12 +14,12 @@ window.onload = function () {
 
 // WEBSITE THEME
 let icon = document.getElementById("icon");
-let themeContainer = document.getElementById('theme-container');
-let postThemeContainer = document.querySelector('#post-page #theme-container');
+const themeContainer = document.getElementById('theme-container');
+const postThemeContainer = document.querySelector('#post-page #theme-container');
 let currentTheme;
 let defaultTheme = themeContainer.href = "css/light.css"
 
-let themeSavedMessage = document.getElementById('theme-message');
+const themeSavedMessage = document.getElementById('theme-message');
 
 function siteTheme() {
 

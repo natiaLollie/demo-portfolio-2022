@@ -2,14 +2,14 @@
 
 function autoDateTimeUpdate() {
 
-    let dateTime = new Date();
+    const dateTime = new Date();
 
     // current date
 
-    let day = dateTime.toLocaleString('en-us', { weekday: 'long' });
-    let month = dateTime.toLocaleString('en-us', { month: 'long' });
-    let daynum = dateTime.getDate();
-    let year = dateTime.getFullYear();
+    const day = dateTime.toLocaleString('en-us', { weekday: 'long' });
+    const month = dateTime.toLocaleString('en-us', { month: 'long' });
+    const daynum = dateTime.getDate();
+    const year = dateTime.getFullYear();
 
     // current time
 
@@ -94,15 +94,15 @@ for (let i = 0; i < seeAllTags.length; i++) {
 
 // CONTACT FORM
 
-const formBtn = document.getElementById('submit-btn');
+let formBtn = document.getElementById('submit-btn');
 formBtn.disabled = true;
 
 document.querySelectorAll('.input-field').forEach(input => {
     input.addEventListener('input', function(e){
 
-        const nameRequired = document.querySelectorAll('.input-field')[0].value;
-        const emailRequired = document.querySelectorAll('.input-field')[3].value;
-        const messageRequired = document.querySelectorAll('.input-field')[4].value;
+        let nameRequired = document.querySelectorAll('.input-field')[0].value;
+        let emailRequired = document.querySelectorAll('.input-field')[3].value;
+        let messageRequired = document.querySelectorAll('.input-field')[4].value;
 
         if (nameRequired == "" || emailRequired == "" || messageRequired == "") {
             // console.log('a required field is empty');

@@ -12,11 +12,11 @@
  * 
  **/
 
-var dropMenuList = document.getElementById('project-dropdown');
-var projectCard = document.querySelectorAll('.project-card > div');
-var tabMenuList = document.querySelectorAll('#project-filter ul li');
-let tabMenuListArr = ['all', 'fun', 'work', 'legacy'];
-let defaultSubDirectory = document.getElementById('subdirectory-url').innerHTML;
+const dropMenuList = document.getElementById('project-dropdown');
+let projectCard = document.querySelectorAll('.project-card > div');
+let tabMenuList = document.querySelectorAll('#project-filter ul li');
+const tabMenuListArr = ['all', 'fun', 'work', 'legacy'];
+const defaultSubDirectory = document.getElementById('subdirectory-url').innerHTML;
 let hashtagMenuItem = document.querySelectorAll("#project-filter-skillset ul li");
 
 
