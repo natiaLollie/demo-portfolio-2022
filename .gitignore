@@ -8,3 +8,5 @@ workspace.code-workspace
 .DS_Store
 MacPaint/
 .vscode/
+/resources/assets/fonts/
+/resources/assets/mac ref imgs/Fonts/
