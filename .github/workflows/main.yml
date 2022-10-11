@@ -17,4 +17,4 @@ jobs:
         server: server270.web-hosting.com
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-        server-dir: /demo.success-way.co
+        server-dir: /demo.success-way.co/
