@@ -1042,9 +1042,9 @@ div.showcase-images-container a img {
     border: 2px gray solid;
     border-radius: 10px;
     padding: 2px;
-    text-align: center;
     margin-bottom: 10px;
     margin-right: 10px;
+    text-align: center;
     text-transform: capitalize;
 }
 
@@ -1052,7 +1052,6 @@ div.showcase-images-container a img {
     border-color: red;
     color: red;
 }
-
 
 /* COMING SOON PAGE */
 
@@ -1078,12 +1077,8 @@ div.showcase-images-container a img {
 .coming-soon-wrapper h1 {
     margin: 0;
     font-size: 44px;
-}
-
-#coming-soon-message h1,
-p {
     color: var(--containerTextColor);
-    font-family: var(--windowTitle);
+    font-family: var(--windowTitle)
 }
 
 .coming-soon-wrapper img {
@@ -1091,9 +1086,11 @@ p {
 }
 
 #coming-soon-message p {
-    margin-top: 20px;
-    line-height: 35px;
+    color: var(--containerTextColor);
+    font-family: var(--windowTitle);
     font-size: 22px;
+    line-height: 35px;
+    margin-top: 20px;
 }
 
 .coming-soon-wrapper .error-restart-btn {
