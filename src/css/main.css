@@ -1010,7 +1010,6 @@ div.showcase-images-container a img {
     border: 3px solid var(--borderColor);
     margin: 5em auto;
     padding-top: 20px;
-
 }
 
 .page-not-found-wrapper p {
@@ -1052,6 +1051,56 @@ div.showcase-images-container a img {
 .error-restart-btn:hover {
     border-color: red;
     color: red;
+}
+
+
+/* COMING SOON PAGE */
+
+.coming-soon-wrapper {
+    display: grid;
+    grid-template-rows: 400px 100px 100px;
+    grid-template-areas:
+        'coming-soon-image'
+        'coming-soon-message'
+        'coming-soon-restart'
+    ;
+    align-items: center;
+
+    height: auto;
+    width: 50%;
+    background-color: var(--containerColor);
+    border: 3px solid var(--borderColor);
+    margin: 5em auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.coming-soon-wrapper h1 {
+    margin: 0;
+    font-size: 44px;
+}
+
+#coming-soon-message h1,
+p {
+    color: var(--containerTextColor);
+    font-family: var(--windowTitle);
+}
+
+.coming-soon-wrapper img {
+    width: 50%;
+}
+
+#coming-soon-message p {
+    margin-top: 20px;
+    line-height: 35px;
+    font-size: 22px;
+}
+
+.coming-soon-wrapper .error-restart-btn {
+    font-size: 20px;
+    align-self: center;
+    margin: 0 auto;
+    width: 100px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1130,6 +1179,10 @@ div.showcase-images-container a img {
     .page-not-found-wrapper p {
         font-family: var(--menuFont);
         font-size: 20px;
+    }
+
+    .coming-soon-wrapper {
+        width: 95%;
     }
 
 }
