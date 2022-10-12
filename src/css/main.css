@@ -1368,31 +1368,11 @@ div.showcase-images-container a img {
 
 @media screen and (max-width: 600px) {
 
-    .navbar a {
-        font-size: 12px;
-    }
-
-    .navbar #logo {
-        font-size: 0.8em;
-    }
-
-    #theme-icon {
-        width: 15px;
-    }
-
     .project-card div {
         width: 90%;
     }
 
     .contact-container {
         width: 95%;
-    }
-
-    .footer li a {
-        font-size: 12px;
-    }
-
-    .footer #logo {
-        font-size: 0.8em;
     }
 }
