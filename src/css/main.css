@@ -1014,7 +1014,7 @@ div.showcase-images-container a img {
 
 .page-not-found-wrapper p {
     color: var(--containerTextColor);
-    font-family: var(--menuFont);
+    font-family: var(--windowTitle);
     font-size: 20px;
 }
 
@@ -1028,6 +1028,10 @@ div.showcase-images-container a img {
     grid-area: error-message;
     line-height: 30px;
     margin: auto 10px;
+}
+
+#error-sub-message {
+    margin-left: 20px;
 }
 
 #error-restart {
@@ -1172,11 +1176,32 @@ div.showcase-images-container a img {
 
     .page-not-found-wrapper {
         width: 95%;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 100px 100px;
+        grid-template-areas:
+            'error-image'
+            'error-message'
+            'error-restart';
+        align-items: flex-start;
     }
 
     .page-not-found-wrapper p {
         font-family: var(--menuFont);
         font-size: 20px;
+        text-align: center;
+    }
+
+    #error-sub-message {
+        margin-left: 0;
+    }
+
+    .page-not-found-wrapper .error-restart-btn {
+        margin: 0 auto;
+        width: 30%;
+    }
+
+    .coming-soon-wrapper .error-restart-btn {
+        margin-top: 20px;
     }
 
     .coming-soon-wrapper {
@@ -1342,11 +1367,32 @@ div.showcase-images-container a img {
 }
 
 @media screen and (max-width: 600px) {
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .navbar #logo {
+        font-size: 0.8em;
+    }
+
+    #theme-icon {
+        width: 15px;
+    }
+
     .project-card div {
         width: 90%;
     }
 
     .contact-container {
         width: 95%;
+    }
+
+    .footer li a {
+        font-size: 12px;
+    }
+
+    .footer #logo {
+        font-size: 0.8em;
     }
 }
