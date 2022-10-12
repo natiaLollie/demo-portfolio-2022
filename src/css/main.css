@@ -1014,6 +1014,7 @@ div.showcase-images-container a img {
 }
 
 .page-not-found-wrapper p {
+    color: var(--containerTextColor);
     font-family: var(--menuFont);
     font-size: 20px;
 }
