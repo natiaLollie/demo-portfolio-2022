@@ -185,10 +185,6 @@ nav {
     margin: auto 15px auto 0;
 }
 
-#theme-icon span {
-    display: none;
-}
-
 #settings-icon {
     cursor: pointer;
     width: 22px;
@@ -1380,25 +1376,8 @@ div.showcase-images-container a img {
         font-size: 1em;
     }
 
-    .nav-contact {
-        display: none;
-    }
-
-    #theme-icon {
-        width: auto !important;
-        margin: auto !important;
-    }
-
-    #theme-icon span {
-        display: flex;
-    }
-
     #icon {
         display:none;
-    }
-
-    #mobile-icon {
-        display: block;
     }
 
     .project-card div {
