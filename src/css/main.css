@@ -185,6 +185,10 @@ nav {
     margin: auto 15px auto 0;
 }
 
+#theme-icon span {
+    display: none;
+}
+
 #settings-icon {
     cursor: pointer;
     width: 22px;
@@ -1368,19 +1372,33 @@ div.showcase-images-container a img {
 @media screen and (max-width: 600px) {
 
     .navbar a {
-        padding: 8px 8px 6px 8px;
+        font-size: 16px;
+        padding: 8px 8px 4px 8px;
     }
 
     .navbar #logo {
-        margin-left: -10px;
+        font-size: 1em;
     }
 
-    .navbar .main-container {
-        padding: 0 !important;
+    .nav-contact {
+        display: none;
     }
 
     #theme-icon {
-        margin: 0;
+        width: auto !important;
+        margin: auto !important;
+    }
+
+    #theme-icon span {
+        display: flex;
+    }
+
+    #icon {
+        display:none;
+    }
+
+    #mobile-icon {
+        display: block;
     }
 
     .project-card div {
@@ -1391,7 +1409,16 @@ div.showcase-images-container a img {
         width: 95%;
     }
 
-    .footer .main-container {
-        padding: 0 !important;
+    .footer a {
+        padding: 8px 8px 4px 8px;
     }
+
+    .footer-projects {
+        display: none;
+    }
+
+    .footer #logo {
+        font-size: 1em;
+    }
+
 }
