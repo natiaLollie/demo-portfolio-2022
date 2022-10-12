@@ -873,7 +873,7 @@ textarea {
 }
 
 .footer .mobile-resume {
-    display:none;
+    display: none;
 }
 
 /* INTERNAL POST PAGES */
@@ -992,6 +992,67 @@ div.showcase-images-container a img {
     filter: invert(100%);
 }
 
+/* 404 PAGE NOT FOUND PAGE */
+
+.page-not-found-wrapper {
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+        'error-image error-message .'
+        '. . error-restart'
+    ;
+    align-items: center;
+
+    height: auto;
+    width: 50%;
+    background-color: var(--containerColor);
+    border: 3px solid var(--borderColor);
+    margin: 5em auto;
+    padding-top: 20px;
+
+}
+
+.page-not-found-wrapper p {
+    font-family: var(--menuFont);
+    font-size: 20px;
+}
+
+#error-image {
+    grid-area: error-image;
+    align-self: end;
+    margin-left: 20px;
+}
+
+#error-message {
+    grid-area: error-message;
+    line-height: 30px;
+    margin: auto 10px;
+}
+
+#error-restart {
+    grid-area: error-restart;
+}
+
+#error-restart:hover {
+    cursor: pointer;
+}
+
+.error-restart-btn {
+    border: 2px gray solid;
+    border-radius: 10px;
+    padding: 2px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    text-transform: capitalize;
+}
+
+.error-restart-btn:hover {
+    border-color: red;
+    color: red;
+}
+
 @media screen and (max-width: 1200px) {
     .main-container {
         width: 95%;
@@ -1059,6 +1120,15 @@ div.showcase-images-container a img {
 
     .footer .mobile-resume {
         display: inline-block;
+    }
+
+    .page-not-found-wrapper {
+        width: 95%;
+    }
+
+    .page-not-found-wrapper p {
+        font-family: var(--menuFont);
+        font-size: 20px;
     }
 
 }
@@ -1191,7 +1261,7 @@ div.showcase-images-container a img {
         justify-content: center;
     }
 
-    #post .navbar .main-container{
+    #post .navbar .main-container {
         width: auto;
     }
 
@@ -1223,6 +1293,7 @@ div.showcase-images-container a img {
     .project-card div {
         width: 90%;
     }
+
     .contact-container {
         width: 95%;
     }
