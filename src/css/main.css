@@ -1,41 +1,41 @@
 @font-face {
     font-family: 'Chicago';
-    src: url('/fonts/chicagoflf-webfont.woff') format('woff');
+    src: url('../fonts/chicagoflf-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Segoe UI Bold';
-    src: url('/fonts/segoe-ui-bold-webfont.woff') format('woff');
+    src: url('../fonts/segoe-ui-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Trebuchet MS';
-    src: url('/fonts/trebuchet-ms.woff') format('woff');
+    src: url('../fonts/trebuchet-ms.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Trebuchet MS Bold';
-    src: url('/fonts/trebuchet-ms-bold.woff') format('woff');
+    src: url('../fonts/trebuchet-ms-bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Helvetica';
-    src: url('/fonts/helvetica-webfont.woff') format('woff');
+    src: url('../fonts/helvetica-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Helvetica Light';
-    src: url('/fonts/helvetica-light-webfont.woff') format('woff');
+    src: url('../fonts/helvetica-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
