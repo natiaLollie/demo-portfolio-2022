@@ -18,5 +18,5 @@ jobs:
         port: 21
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-        server-dir: /demo.success-way.co/
+        server-dir: /portfolio-history.natialollie.success-way.co/2022-fork-demo/
         local-dir:  ./src/
